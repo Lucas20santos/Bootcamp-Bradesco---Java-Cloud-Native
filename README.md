@@ -65,5 +65,18 @@ Conhecer a estrutura, a história de craição e evolução da linguagem Java, a
 
 - JDK -> Kit de desenvolvimento Java
 - JRE
+- Instalação do Visual Studio Code
+
+## Sintaxe Básica com Java
+
+## Programação Orientada a Objetos
+
+## Desenvolvimento de APIs
+
+## Integração com Banco de Dados
+
+## Trabalhando com Ambiente Cloud na Azure
+
+## Serviços CLoud de Inteligência Artificial
 
 ## Referência
