@@ -1,4 +1,8 @@
+
+import modulos.*;
+
 public class MinhaClasse {
+
     public  static void main(String [] args)
     {
         System.out.println("Olá Mundo");
@@ -7,27 +11,14 @@ public class MinhaClasse {
 
         System.out.println(BR);
 
-        
-        /*
-         * Declaração invalida de variávies
-         *  int numero&um = 1;
-         *  int 1numero = 1;
-         *  int numero um = 1;
-         *  int long = 1;
-        */
+        // Declarações de variáves
+        Declaracao d1 = new Declaracao();
+        d1.DeclaracaoInvalidas();
+        d1.DeclaracaoValida();
 
-        /*
-        * Declarações validas
-        * 
-        */
+        // Tipagem
+        Tipagem t1 = new Tipagem();
+        t1.TipagemVariaveis("Lucas", "Santos");
 
-        int numero$um = 1;
-        int numero1 = 1;
-        int numeroUm = 1;
-
-        System.out.println(numero$um);
-        System.out.println(numero1);
-        System.out.println(numeroUm);
-        
     }
 }
