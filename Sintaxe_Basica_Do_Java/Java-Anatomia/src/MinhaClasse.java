@@ -20,5 +20,9 @@ public class MinhaClasse {
         Tipagem t1 = new Tipagem();
         t1.TipagemVariaveis("Lucas", "Santos");
 
+        // identação
+        Identacao I1 = new Identacao();
+        I1.Indentar();
+        I1.publicarMedia();
     }
 }
