@@ -1,3 +1,6 @@
+package edu.lucas.aulas02;
+
+
 public class Identacao {
 
     int valor = 10;

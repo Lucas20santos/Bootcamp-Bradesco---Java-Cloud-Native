@@ -1,5 +1,8 @@
 
-import modulos.*;
+import edu.lucas.aulas.Declaracao;
+import edu.lucas.aulas.Identacao;
+import edu.lucas.aulas.Tipagem;
+
 
 public class MinhaClasse {
 

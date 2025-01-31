@@ -1,4 +1,4 @@
-package modulos;
+package edu.lucas.aulas02;
 
 public class Tipagem {
 
