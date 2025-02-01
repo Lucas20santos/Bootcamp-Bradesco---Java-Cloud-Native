@@ -1,7 +1,6 @@
-
-import edu.lucas.aulas.Declaracao;
-import edu.lucas.aulas.Identacao;
-import edu.lucas.aulas.Tipagem;
+import edu.lucas.aulas02.Declaracao;
+import edu.lucas.aulas02.Identacao;
+import edu.lucas.aulas02.Tipagem;
 
 
 public class MinhaClasse {
