@@ -1,7 +1,6 @@
-import edu.lucas.aulas02.Declaracao;
-import edu.lucas.aulas02.Identacao;
-import edu.lucas.aulas02.Tipagem;
-
+import modulos.Declaracao;
+import modulos.Identacao;
+import modulos.Tipagem;
 
 public class MinhaClasse {
 
