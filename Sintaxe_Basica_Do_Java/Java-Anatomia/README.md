@@ -1,18 +1,25 @@
-## Getting Started
+# Tipos e Variáveis 
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+// Depois organizar
 
-## Folder Structure
+## Objetivo do curso
 
-The workspace contains two folders by default, where:
+Explorar os tipos de dados numerícos interios, numériocs decimais, lóogicos, caracteres e suas aplicabilidades. Explicar a diferença entre definição de variáveis e constantes.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Pré requisitos
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- JDK instalado 
+- IDE escolhida
+- Diretório do projeto definido
+- Integração com Github
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Tipos e Variáveis
 
-## Dependency Management
+### Assuntos
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- Numericos interios e decimais
+- Tipos lógicos
+- Caracteres
+- Objetos
+- Diferença entre variável e constante.
+
