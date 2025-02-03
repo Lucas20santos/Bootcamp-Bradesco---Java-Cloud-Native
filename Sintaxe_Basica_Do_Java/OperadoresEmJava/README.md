@@ -54,3 +54,14 @@ O operador de condição ternária é uma forma resumida para definir uam condi�
 O operador ternário é representado pelos símbolos ?: utilizando da seguinte forma
 
 (< Expressão Condicional > ? < Case condição seja true >: < Caso condição seja false >)
+
+### Operadores relacionais
+
+Os operadores relacionais avaliam a relação entre duas variáveis ou expressões.
+
+- "==" -> Igual
+- "!=" -> Diferente
+- ">=" -> Maior ou Igual
+- "<=" -> Menor ou Igual
+- ">"  -> Maior que
+- "<"  -> Menor que
