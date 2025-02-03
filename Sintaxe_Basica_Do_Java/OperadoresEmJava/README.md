@@ -36,3 +36,13 @@ O operador aritmétrico é utilizado para realizar operações matemáticas entr
 - Subtração (-)
 - Multiplicação (*)
 - divisão (/)
+
+## Unários
+
+Esses operadores são aplicados juntamente com um outro operador aritmético. Eles realizam alguns trabalhos básicos como incrementar, decrementar, inverter valores numéricos e booleanos.
+
+- Operador unário de valor positivo (+)
+- Operador unário de valor negativo (-)
+- Operador unário de incremento de valor (++)
+- Operador unário de decremento de valor (--)
+- Operador unário lógico de negação (!)
