@@ -1,18 +1,35 @@
-## Getting Started
+# Métodos
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Objetivos
 
-## Folder Structure
+Apresentar critérios para criação de métodos, parâmetros e visibulidade.
 
-The workspace contains two folders by default, where:
+## Assuntos
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- Qual a proposta principal do método ?
+- Qual o tipo de retorno esperado após executar o método ?
+- Quais os parâmetros serão necessários para execução do método ?
+- O método possui o rico de apresentar alguma exceção ?
+- Qual a visibilidade do método ?
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Métodos
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Uma classe é definida dpor atributos e métodos. Já vimos que atributos são, em sua grande maioria, variáveis de diferentes tipso e valores. Os métodos, pr sua vez, correspondem a **funções** ou **sub-rotinas** disponíveis dentro da nossa classes.
 
-## Dependency Management
+### Critérios de nomeação de Métodos
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Esses critérios não são obrigatórios, mas é recomendável que sejam seguidos pois esseas convernções facilitam a vida dos programadores ao trabalharem em códigos de forma colaborativa. Ao seguir estas convenções, tornamos o código mais legível para nós e também para outras pessoas. Pra métodos, os critérios são:
+
+- Dever ser nomeado como verbo
+- Seguir o padrão camelCase (Todas as letras minúsculas com a exceção da primeira letra da segunda palavra).
+
+### Critéiro de definição de métodos
+
+1. **Qual a proposta principal do método?** Voce deve se perguntar constantemente até compreender a real finalidade do método.
+2. **Qula o tipo de retorno esperado após executar o método?** Você deve analisar se o método será responsável pr retornar algum valor ou não.
+
+Caso o método não retorne nenhuma valor qualquer, ele sera representado pela palavra-chave *void*
+
+1. **Quais os parãmetros serão necessários para execução do método?** Os me´tods as vezes precisão de argumentos como critéios para a execução.
+2. **O método possui o rico de apresentar alguma exceção ?** Exceções são comuns na execução de métodos, as vezes é necessário prever e tratar a possível existẽncia de uma exceção.
+3.**Qual a visibilidade do método ?** Será necessário que o método seja visível a toda aplicação, somente em memso pacotes, através de herança ou somente a viel a própria classe.
