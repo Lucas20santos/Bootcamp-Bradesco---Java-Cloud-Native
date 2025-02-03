@@ -1,5 +1,6 @@
 import modulos.OperadorAritmetrico;
 import modulos.OperadorAtribuicao;
+import modulos.OperadorTernario;
 import modulos.OperadoresUnario;
 
 public class Operadores {
@@ -31,6 +32,9 @@ public class Operadores {
         Ou1.incrementarUsandoOperadorUnarioDecremento(10);
         Ou1.incrementarUsandoOperadorUnarioDecremento(10);
 
+        // Operador ternario
+        OperadorTernario Ot1 = new OperadorTernario();
+        Ot1.verificarMaiorIdade(18);
     }
     
 }

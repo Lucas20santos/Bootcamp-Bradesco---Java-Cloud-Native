@@ -37,7 +37,7 @@ O operador aritmétrico é utilizado para realizar operações matemáticas entr
 - Multiplicação (*)
 - divisão (/)
 
-## Unários
+### Unários
 
 Esses operadores são aplicados juntamente com um outro operador aritmético. Eles realizam alguns trabalhos básicos como incrementar, decrementar, inverter valores numéricos e booleanos.
 
@@ -46,3 +46,11 @@ Esses operadores são aplicados juntamente com um outro operador aritmético. El
 - Operador unário de incremento de valor (++)
 - Operador unário de decremento de valor (--)
 - Operador unário lógico de negação (!)
+
+### Ternário
+
+O operador de condição ternária é uma forma resumida para definir uam condição e escolher por um dentre dois valores.
+
+O operador ternário é representado pelos símbolos ?: utilizando da seguinte forma
+
+(< Expressão Condicional > ? < Case condição seja true >: < Caso condição seja false >)
