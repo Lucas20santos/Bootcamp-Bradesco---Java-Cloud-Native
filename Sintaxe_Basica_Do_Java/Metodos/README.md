@@ -148,6 +148,22 @@ Podemos compreender e explorar todos os recuros organizados por pacotes e classe
 
 Java documentation é composto por tags que represntam dados relevantes para a compreensão da proposta de uma classe e os conjuntos de seu métodos e atributos conforme tabela abaixo:
 
+## Objetivos - Terminal e argumentos
 
+Explorar opções de entrada e saída simples de dados em uma aplicação em Java.
 
+## Assuntos
+
+- main args
+- scanner
+- Execução via IDE
+- Execução via prompt de comando
+
+## Terminal e Argumentos
+
+Com a JVM nos podemos criar um executavel do nosso programa e disponibilizar o instalador para qualquer sistema operacional.
+
+## Argumentos
+
+Quando executamos uma classe que contenha o método main, o mesmo permite que passemos um array [] de argumentos do tipo String. Logo podemos após a definição da classe a ser executada informar estes parâmetros.
 

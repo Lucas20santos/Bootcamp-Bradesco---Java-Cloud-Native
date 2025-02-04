@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+    {
+        "type": "java",
+        "request": "launch",
+        "mainClass": "CapturaDeValoresPeloTerminal",
+        "args": [
+            "LUCAS",
+            "DE SOUZA SANTOS",
+            "32",
+            "1.75"
+        ]
+    }
+    ]
+}
