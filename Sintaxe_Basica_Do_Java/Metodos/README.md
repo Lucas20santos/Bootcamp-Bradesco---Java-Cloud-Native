@@ -56,5 +56,75 @@ Caso você declare uma variáviel DENTRO DE UM MÉTODO, o escopo dessa variável
 
 Uma parte fundamental na elaboração de algoritmos simples ou complexos é determinar a localização do código em questão. Sem um domínio sobre escopo de códigos seu projeto tende a conter falhas estruturais e compromenter a proposta principal da aplicação.
 
-## Objetivos - Aula Escopo
+## Objetivos - Aula palavras reservadas
 
+Apresentar as 52 palavras reservadas organizadas por classificação de usabilidade considerando as regras da linguagem.
+
+## Assuntos
+
+- Tipos Primitivos
+- Classificações
+- Escopo de uso
+- Palavras "opostas"
+
+## Palavras reservadas
+
+São identificadores de uma linguagem que já possuem uma finalidade específica, portanto não podem ser utilizados para nomear variáveis, classes, métodos ou atributos.
+
+A linguagem Java possui 52 palavras reeservadas. Todas essas palavras são classificadas em grupos e escritas com letra minúsculas, sendo identificadas com uma cor especial pela maioria das IDE's.
+
+- abstract        continue        goto              package             synchronized
+- assert          default         if                private             this
+- boolean         do              implements        protected           throw    
+- break           double          import            public              throws
+- byte            extends         instanceof        return              transient
+- case            final           int               short               try
+- catch           finally         interface         static              void
+- char            else            native            switch              volatil
+- class           float           long              strictfp            while
+- const           for             new               super
+
+### Controle de pacotes
+
+- **import**
+- **packege**
+
+### Modificadores de acesso
+
+- **public**
+- **private**
+- **protected**
+
+### Primitivos
+
+- **boolean**
+- **byte**
+- **char**
+- **double**
+- **float**
+- **int**
+- **long**
+- **short**
+- **void**
+
+### Modificadores de classe, variáveis ou métodos
+
+- **abstract**
+- **class**
+- **extented**
+- **final**
+- **implements**
+- **native**
+- **interface**
+- **new**
+- **static**
+- **strictfp**
+- **synchronized**
+- **transient**
+- **volatile**
+
+### Controle de fluxo dentro de um bloco de código
+
+- **break**
+- **case**
+- **continue**
