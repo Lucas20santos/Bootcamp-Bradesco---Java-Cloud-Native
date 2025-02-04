@@ -1,4 +1,4 @@
-# Métodos, Escopo e palavras reservadas
+# Métodos, Escopo, palavras reservadas, Java Doc e Terminal e argumentos
 
 ## Objetivos - Aula Métodos
 
@@ -128,3 +128,24 @@ A linguagem Java possui 52 palavras reeservadas. Todas essas palavras são class
 - **break**
 - **case**
 - **continue**
+
+## Objetivo - Java Doc
+
+Apresentar a ferramenta de documentação da Linguagem e explorar como adicionar comentários em nossos arquivos.
+
+## Assuntos
+
+- Documentação oficial
+- Tags
+- Tipos de comentarios
+- Javadoc
+
+## Documentação 
+
+Podemos compreender e explorar todos os recuros organizados por pacotes e classes bem específicas sem nem mesmo escrever uma linha de código
+
+## Tags
+
+Java documentation é composto por tags que represntam dados relevantes para a compreensão da proposta de uma classe e os conjuntos de seu métodos e atributos conforme tabela abaixo:
+
+
