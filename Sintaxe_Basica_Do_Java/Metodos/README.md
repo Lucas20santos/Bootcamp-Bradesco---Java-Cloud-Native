@@ -14,7 +14,7 @@ Apresentar critérios para criação de métodos, parâmetros e visibulidade.
 
 ## Métodos
 
-Uma classe é definida dpor atributos e métodos. Já vimos que atributos são, em sua grande maioria, variáveis de diferentes tipso e valores. Os métodos, pr sua vez, correspondem a **funções** ou **sub-rotinas** disponíveis dentro da nossa classes.
+Uma classe é definida por atributos e métodos. Já vimos que atributos são, em sua grande maioria, variáveis de diferentes tipso e valores. Os métodos, pr sua vez, correspondem a **funções** ou **sub-rotinas** disponíveis dentro da nossa classes.
 
 ### Critérios de nomeação de Métodos
 
