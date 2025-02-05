@@ -167,3 +167,6 @@ Com a JVM nos podemos criar um executavel do nosso programa e disponibilizar o i
 
 Quando executamos uma classe que contenha o método main, o mesmo permite que passemos um array [] de argumentos do tipo String. Logo podemos após a definição da classe a ser executada informar estes parâmetros.
 
+## Scanner
+
+A classe **Scanner** permite que o usuario tenha uma interação mais asertiva com o nosso programa.
