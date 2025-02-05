@@ -16,3 +16,7 @@ O comando **for** permite que uma variável contadora seja testada e incrementad
 ### ForEach
 
 O uso do for/each está fortemente relacionado com um cenário onde contenha um array ou coleção, e assim, a interação é baseada aos elementos.
+
+### break e continue
+
+**Break** significa quebrar, parar frear, interromper. E é isso que se faz quando o Java encontra esse comando pela frente. **Continue**, como o nome diz, ele 'continua' o laço. O comando **break** interrompe o laço, já o **continue** interrompe somente a iteração atual.
