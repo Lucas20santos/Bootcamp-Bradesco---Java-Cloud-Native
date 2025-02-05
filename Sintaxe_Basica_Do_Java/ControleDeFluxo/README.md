@@ -27,3 +27,7 @@ A estrutura condicional possibilita a escolha de um grupo de ações e comportam
 ### Condicioanais composta
 
 Algumas vezes o nosso programa deverá seguir mais de uma jornada de execução condicionado a uma regra de negócio, este cenário é denominado **Estrutura Condicional Composta**.
+
+### Condicionais encadeadas ou aniada
+
+EM um controle de fluxo condicional, nem sempre nos limitamos ao se(if) e senão(else), poderemos ter uma terceira, quarta e ou inúmeras condições.
