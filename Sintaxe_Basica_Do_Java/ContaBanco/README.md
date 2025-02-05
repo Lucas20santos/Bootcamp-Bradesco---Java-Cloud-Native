@@ -10,11 +10,11 @@ Avaliar o engajamento do aluno quanto aos fundamentos da linguagem e noções de
 
 https://github.com/digitalinnovationone/trilha-java-basico/tree/main/desafios/sintaxe
 
-# DIO - Trilha Java Básico - Projeto
+## DIO - Trilha Java Básico - Projeto
 www.dio.me
 
 #### Autores
-- [Gleyson Sampaio](https://github.com/glysns)
+- [Lucas de Souza Santos](https://github.com/Lucas20santos)
 
 ## Sintaxe - Desafio
 
@@ -34,6 +34,7 @@ Vamos exercitar todo o conteúdo apresentado no módulo de Sintaxe codificando o
 
 
 ###### Revise sobre terminal, main args e a classe Scanner
+
 2. Permita que os dados sejam inseridos via terminal sendo que o usuário receberá a mensagem de qual informação será solicitada, exemplo:
 
 * Programa: "Por favor, digite o número da Agência !"
