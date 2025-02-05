@@ -1,18 +1,14 @@
-## Getting Started
+# Estruturas de repetições
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Laços de repetição, também conhecidos como laços de iteração ou simplesmente loops, são comandos que permitem iteração de código, ou seja, que comandos presentes no bloco sejam repetidos diversas vezes.
 
-## Folder Structure
+Laços ou repetições
 
-The workspace contains two folders by default, where:
+- for
+- While
+- Do while
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## For
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+O comando **for** permite que uma variável contadora seja testada e incrementada a cada iteração, sendo essas informações definidas na chamada do comando. O comando for recebe como entrada uma variável contadora, a condição e o valor de incrementarão.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
