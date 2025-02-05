@@ -1,18 +1,29 @@
-## Getting Started
+# Controle de fluxo
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Objetivo do curso
 
-## Folder Structure
+Apresentar os conceitos e explorar os tipos de fluxos condicional, excepcional e de repetição em uma aplicação Java.
 
-The workspace contains two folders by default, where:
+## Assuntos
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- Estruturas condicionais: if-else, switch-case
+- Estruturas de repetição: for, while, do-while
+- Estruturas de exceções: try-catch-finally, throw
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## Controle de fluxo
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+É a habilidade de ajustar a maneira como um programa realiza suas tarefas. Por meio de instruções especiais, chamadas de comandos, essas arefas podem ser executadas seletivamente, repetidamente ou excepcionamente.
 
-## Dependency Management
+## Classificação
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- **Estruturas condicionais:** if-else, switch-case
+- **Estruturas de repetição:** for, while, do-while
+- **Estruturas de exceções:** try-catch-finally, throw
+
+## Estruturas condicionais
+
+A estrutura condicional possibilita a escolha de um grupo de ações e comportamentos a serem executadas quando determinadas condições são ou não satisfeitas. A estrutura condicioanl pode ser Simples ou composta.
+
+### Condicioanais composta
+
+Algumas vezes o nosso programa deverá seguir mais de uma jornada de execução condicionado a uma regra de negócio, este cenário é denominado **Estrutura Condicional Composta**.
