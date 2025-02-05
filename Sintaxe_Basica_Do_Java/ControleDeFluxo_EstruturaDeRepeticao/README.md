@@ -24,3 +24,7 @@ O uso do for/each está fortemente relacionado com um cenário onde contenha um 
 ## While
 
 O laço **while** determina que enquanto uma condição for válida, o bloco de código será executado. O laço **while** testa a condição antes de eecutar o código, logo, caso a condição seja inválida no primeiro teste o bloco nem será executada.
+
+## Do While
+
+O laço **do / while**, assim como o laço while, considera que enquanto uma determinada condição for válida o bloco de código será executado. Entratanto, **do/while** testa a condição após executar o código, sendo assim, mesmo que a conição seja considerada inválida no primeiro teste o bloco será executado pelo menos uma vez.
