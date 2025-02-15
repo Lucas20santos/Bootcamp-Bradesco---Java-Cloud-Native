@@ -79,6 +79,8 @@ Conhecer a estrutura, a história de craição e evolução da linguagem Java, a
 
 - Tipos de variáveis
 
+### Debugs
+
 ## Programação Orientada a Objetos
 
 ## Desenvolvimento de APIs
