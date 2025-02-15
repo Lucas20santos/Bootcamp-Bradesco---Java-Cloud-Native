@@ -69,6 +69,16 @@ Conhecer a estrutura, a história de craição e evolução da linguagem Java, a
 
 ## Sintaxe Básica com Java
 
+- [Anatomia de classe](https://github.com/Lucas20santos/Bootcamp-Bradesco---Java-Cloud-Native/tree/main/Sintaxe_Basica_Do_Java/anotacoes)
+- [identação](https://github.com/Lucas20santos/Bootcamp-Bradesco---Java-Cloud-Native/tree/main/Sintaxe_Basica_Do_Java/anotacoes)
+- [introdução](https://github.com/Lucas20santos/Bootcamp-Bradesco---Java-Cloud-Native/tree/main/Sintaxe_Basica_Do_Java/anotacoes)
+- [Java Beans](https://github.com/Lucas20santos/Bootcamp-Bradesco---Java-Cloud-Native/tree/main/Sintaxe_Basica_Do_Java/anotacoes)
+- [Organização](https://github.com/Lucas20santos/Bootcamp-Bradesco---Java-Cloud-Native/tree/main/Sintaxe_Basica_Do_Java/anotacoes)
+
+### Variáveis
+
+- Tipos de variáveis
+
 ## Programação Orientada a Objetos
 
 ## Desenvolvimento de APIs
