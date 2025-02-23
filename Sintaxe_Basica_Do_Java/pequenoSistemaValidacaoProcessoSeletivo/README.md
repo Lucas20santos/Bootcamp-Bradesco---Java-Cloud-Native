@@ -19,5 +19,13 @@ Foi solicitado que nosso sistema garanta que diante das inúmeras candidaturas s
 - criar uma string para armazenar os outros candidatos qualificados, mas ficaram em lista de espera.
 - criar uma função randomica que vai setar o valor do salario preferido por cada candidado.
 
-
 ### Case 3: 
+
+Agora é hora de imprimir a lista dos candidatos selecionados para disponibilizar para o RH entrar em contato.
+
+### Case 4:
+
+O RH deverá realizar uma ligação com no máximo 03 tentativas para cada candidato selecionado e caso o candidato atenda, deve-se imprimir:
+
+- 
+

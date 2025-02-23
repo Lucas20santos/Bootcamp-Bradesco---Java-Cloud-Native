@@ -27,6 +27,14 @@ public class SistemaCandidaturaAprimorado
             candidatoAtual++;
         }
     }
+    static void imprimirSelecionados() 
+    {
+        String [] candidatos = {"Lucas", "Marcos", "João", "Ana", "Maria"};
+        System.out.println("Imprimindo lista de candidados selecionados");
+        for (int i = 0; i < candidatos.length; i++) {
+            System.out.println("O candidato de indice: "+ i+1 + " é o " + candidatos[i]);
+        }
+    }
     public static void analisar(double salarioPretendido)
     {
         double salarioBase = 2000.0;
