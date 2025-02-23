@@ -18,6 +18,13 @@ public class SistemaCandidaturaAprimorado
         {
             String candidato = candidatos[candidatoAtual];
             double salarioPretendido = salarioPretendidoCandidatos();
+
+            System.out.println("Candidato: " + candidato + " Salario Pretendido: " + salarioPretendido);
+            if(salarioBase > salarioPretendido && candidatoAtual < candidatos.length)
+            {
+                candidatosSelecionados++;
+            }
+            candidatoAtual++;
         }
     }
     public static void analisar(double salarioPretendido)
