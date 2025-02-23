@@ -4,35 +4,39 @@ public class SistemaCandidaturaAprimorado
 {
     public static void main(String[] args) 
     {
-        final double SALARIOBASE = 2000;
+
+    }
+    public static void selecaoCandidatos()
+    {
         String [] candidatos = {"Lucas", "Marcos", "João", "Ana", "Maria", "Luiz", "Andre", "Marcone", "Fernando", "Monica", "Joana", "Luiza", "Mario"};
 
-        analisarCandidatura(SALARIOBASE, candidatos);
+        int candidatosSelecionados = 0;
+        int candidatoAtual = 0;
+        double salarioBase = 2000.0;
 
-    }
-
-    public static void analisarCandidatura(double SALARIOBASE, String [] candidatos)
-    {
-        
-        for(String candidato: candidatos)
+        while(candidatosSelecionados < 5)
         {
-            try
-            {
-                System.out.println("Candidato " + candidato + ", informe o salario pretendido: ");
-                double salarioPretendido = salarioPretendidoCandidatos();
-
-                if(salarioPretendido < SALARIOBASE) System.err.println("LIGAR PARA O CANDIDATO");
-                else if (salarioPretendido == SALARIOBASE) System.err.println("LIGAR PARA O CANDIDATO COM CONTRA PROPOSTA.");
-                else System.err.println("AGUARDANDO RESULTADO DEMAIS CANDIDATOS");
-                
-            }
-            catch(Exception err)
-            {
-                System.err.println("erro: " + err.getMessage());
-            }
+            String candidato = candidatos[candidatoAtual];
+            double salarioPretendido = salarioPretendidoCandidatos();
         }
     }
-    private static double salarioPretendidoCandidatos() {
+    public static void analisar(double salarioPretendido)
+    {
+        double salarioBase = 2000.0;
+        if(salarioBase > salarioPretendido)
+        {
+            System.out.println("LIGAR PARA O CANDIDATO");
+        }
+        else if(salarioBase == salarioPretendido)
+        {
+            System.out.println("LIGAR PARA O CANDIDATO COM OUTRA PROPOSTA");
+        }
+        else
+        {
+            System.out.println("AGUARDANDO O RESULTADO DOS DEMAIS CANDIDATOS");
+        }
+    }
+    public static double salarioPretendidoCandidatos() {
         return ThreadLocalRandom.current().nextDouble(1800, 2200);
     }
 }
