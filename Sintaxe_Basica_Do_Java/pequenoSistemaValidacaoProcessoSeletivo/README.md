@@ -27,5 +27,5 @@ Agora é hora de imprimir a lista dos candidatos selecionados para disponibiliza
 
 O RH deverá realizar uma ligação com no máximo 03 tentativas para cada candidato selecionado e caso o candidato atenda, deve-se imprimir:
 
-- 
-
+- "CONSEGUIMOS CONTATO COM [CANDIDATO] APÓS [TENTATIVA] [TENTATIVA(S)]"
+- do contrário imprima: "NÃO CONSEGUIMOS CONTATO COM O [CANDIDATO]"
