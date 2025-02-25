@@ -1,18 +1,16 @@
-## Getting Started
+# Introdução a programação orientado a objetos
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Orientação a objetos
 
-## Folder Structure
+### Objetivo do curso
 
-The workspace contains two folders by default, where:
+Abordar os conceitos do paradigma e os pilares da orientação a objetos, classes, enums, construtores, jáva bens e UML.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+### Assuntos
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- Conceito de POO
+- Pacotes e Visibilidade de recursos
+- Classes e Construtores
+- Java Beans e UML
+- Pilares do POO
+- Enums e Interfaces
