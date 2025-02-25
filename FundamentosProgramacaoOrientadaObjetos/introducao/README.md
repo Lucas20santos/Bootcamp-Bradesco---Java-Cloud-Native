@@ -77,3 +77,68 @@ Aplicação/ Concessionária
     - VeiculoRepository
     - ClienteRepository
     - PecaRepository
+
+## Pacotes
+
+A linguagem Java é composta por milhares de classes com as finalidades de, por exemplo: 
+
+- Classes de tipos de dados
+- Conexão com banco de dados
+- Representação de texto
+- números
+- datas
+- arquivos
+- Diretório
+
+Imagina todas estas classes existirem em único nível de documento ? E as classes desenvolvidas por nós, meros desenvolvedores de aplicações de vários os gêneros? Imagina como ficaria este diretório em ?
+
+Para previenir este aconecimento, a linguagem dispõe de um recurso que organiza as classes padrão e criadas por nós, que conhecemos como pacote (package). Os pacotes são subdiretórios a partir da pasta src do nosso projeto onde estão localizadas as classes da linguagem e novas que forem criadas para o projeto. Existem algumas convenções para criação de pacotes já utilizados no mercado.
+
+### Nomeclatura
+
+Vamos imaginar que sua empresa se chamar **Power Soft** e ela está desenvolvendo softwares comercial, gonvernamentl e sum software livreou de código aberto. Abaixo teríamos os pacotes sugeridos conforme tabelea abaixo:
+
+- **Comercial**: com.powersoft
+- **Gorvernamental**: gov.powersoft
+- **Codigo aberto**: org.powersoft
+
+Bem, acima já podemos perceber que existe uma definição para o uso do nome dos pacotes. Porém, podemos organizar ainda mais um pouco as nossas classes mediante a proposta de sua existência:
+
+-   **model:** Classes que representam a camada e modelo da aplicação.
+  -   Cliente,
+  -   Pedido,
+  -   NotaFiscal,
+  -   Usuario
+-   **Repository:** Classes ou interfaces que possuem a finalidade de interagir com tabelas no banco de dados: ClienteRepository
+-   **Service:** Classes que contém regras de negócio e validação de nosso sistema: ClienteService possui  o método validar o CPF do cliente cadastrado.
+-   **Controller:** Classes que possuem a finalidade de disponibilizar os nossos recursos da aplicação para outras aplicações via padrão HTTP.
+-   **View**: Classes que possuem alguma interação com a interface gráfica acessada pelo usuário.
+-   **Util:** Classes que contém recursos comuns à toda nossa aplicação.
+
+### Identificação
+
+Uma das características de uma classe é a sua identificação, Cliente, NotaFiscal, TituloPagar. Porém, quando esta classe é organizada por pacotes, ela passa a ter duas identificações. O nome simples (**próprio nome**) e agora o nome qualificado (**endereçamento do pacote + nome**), exemplo: Considere a classe usuario que está endereçada no pacote: 
+
+com.controle.acesso.model, o nome qualificado desta classe é **com.controle.acesso.model.Usuario**
+
+### Package versus Import
+
+A localização de uma calsse é definida pela palavra reservada packge, logo, uma classe só contém uma definição de pacote no arquivo, sempre na primeira linha do código. Para a utilização de uma classe existentes em outros pacotes, necessitamos realizar a importação das mesmas, seguindo a recomendação abaixo: 
+
+`  
+    Exemplo:
+  
+    package
+
+    import ...
+    import ...
+
+    public class MinhaClasse { 
+    
+    }
+    
+`
+
+### Por que é tão importante compreender de pacotes ?
+
+A linguagem Java é composta por milhares de classes internas, classes desenvolvidas em projetos disponíveis através de biblioteca e as classes do nosso projeto. Logo, existe uma enorme possibilidade da existênica de classes de mesmo nome. 
