@@ -154,3 +154,21 @@ Para uma melhor ilustração, iremos representar os contceitos de visibilidade d
 ### Modificador public
 
 - quando nossa classe, método e atributo é definido como public, qualquer outra classe em qualquer outro pacote pode svisualizar tais recursos
+
+### Modificador defualt
+
+O modificador **defalut** está fortemente associado a organização das classes por pacotes, algumas implementações não precisam estar disponíveis por todo o projeto, e este modificador de acesso restringe a visibilidade por pacotes.
+
+Dentro do pacote **lanchonte**, iremos criar dois sub-pacotes para representar a divisão do estabelecimento.
+
+### Modificador private
+
+Depois de reestruturar nosso estabelecimento (projeto), onde, temos as divisões (pacotes) espaço do cliente e eatendiment, chegou a hora de uma reflexão sore visibilidade ou modificadores de acesso.
+
+Conhecemos as ações disponiveis nas classses Cozinheiro, Almoxarife, Atendente e Cliente, mesmo com a organização das visibilidade por pacote, será se realimente estas classes precisam ser tão explicitas ?
+
+- Será se o Cozinheiro precisa saber que\como o Almoxaridfe controle as entradas e saídas ?
+- Que o Cliente precisa saber como o atendente recebe o pedido e servir sua mesa?
+- Que o Atendente precisa saber que antes de pagar o Cliente consulta o saldo App ?
+
+Diante destes questionamentos é que nossas classes precisam scontinuar antendo suas ações (métodos) mas nem todas precisam ser vistas por ninguém.
