@@ -39,17 +39,17 @@ As classes existentes em nosso projeto serão composta por:
 - **Comportamentos** (behaviors): Também conhecido como **métodos** ou **ações**, é toda ação que o objeto pode realizar.
 - **Instanciar** (new): É o ato de criar um objeto a partir de estrutura definida em uma calsse.
 
-Seguindo algumas converções, as nossas calsses são classificadas como: 
+Seguindo algumas converções, as nossas calsses são classificadas como:
 
 - **Classe de modelo(model):** classes que representem estrutura de domínio da aplicação, exemplo:
-    - Cliente,
-    - Pedido,
-    - Nota Fiscal
+  - Cliente,
+  - Pedido,
+  - Nota Fiscal
 - **Classe de serviço (service):** classes que conteḿ regras de negócio e validação de nosso sistema.
 - **Classe de repositório (repository):** classes que contém uma integraçãoc om banco de dados.
 - **Classe de controle (controller):** classes que possuem a finalidade de disponibilizar alguma comunicação externa á nossa aplicação, tipo:
-    - http web
-    - webservices
+    -http web
+    -webservices
 - **Classe utilitária (util):** classe que contém recursos comuns à toda nossa aplicação.
 
 ### Exemplos
@@ -57,30 +57,30 @@ Seguindo algumas converções, as nossas calsses são classificadas como:
 Aplicação/ Concessionária
 
 - Classe de modelo
-    - Empresa
-    - Veículo (Carro)
-    - Cliente
-    - Nota Fiscal
-    - Colaborador
-    - Peça
+  - Empresa
+  - Veículo (Carro)
+  - Cliente
+  - Nota Fiscal
+  - Colaborador
+  - Peça
 - Classes de Serviços
-    - VeiculoService
-    - ClienteService
-    - OficinaService
-    - NotaFiscalService
+  - VeiculoService
+  - ClienteService
+  - OficinaService
+  - NotaFiscalService
 - Classe de utilidades
-    - FormatadorUtil
-    - ValidadorUtil
-    - CalculadoraUtil
-    - ChaveInglesaUtil
+  - FormatadorUtil
+  - ValidadorUtil
+  - CalculadoraUtil
+  - ChaveInglesaUtil
 - Classe de repositório
-    - VeiculoRepository
-    - ClienteRepository
-    - PecaRepository
+  - VeiculoRepository
+  - ClienteRepository
+  - PecaRepository
 
 ## Pacotes
 
-A linguagem Java é composta por milhares de classes com as finalidades de, por exemplo: 
+A linguagem Java é composta por milhares de classes com as finalidades de, por exemplo:
 
 - Classes de tipos de dados
 - Conexão com banco de dados
@@ -104,26 +104,26 @@ Vamos imaginar que sua empresa se chamar **Power Soft** e ela está desenvolvend
 
 Bem, acima já podemos perceber que existe uma definição para o uso do nome dos pacotes. Porém, podemos organizar ainda mais um pouco as nossas classes mediante a proposta de sua existência:
 
--   **model:** Classes que representam a camada e modelo da aplicação.
-  -   Cliente,
-  -   Pedido,
-  -   NotaFiscal,
-  -   Usuario
--   **Repository:** Classes ou interfaces que possuem a finalidade de interagir com tabelas no banco de dados: ClienteRepository
--   **Service:** Classes que contém regras de negócio e validação de nosso sistema: ClienteService possui  o método validar o CPF do cliente cadastrado.
--   **Controller:** Classes que possuem a finalidade de disponibilizar os nossos recursos da aplicação para outras aplicações via padrão HTTP.
--   **View**: Classes que possuem alguma interação com a interface gráfica acessada pelo usuário.
--   **Util:** Classes que contém recursos comuns à toda nossa aplicação.
+- **model:** Classes que representam a camada e modelo da aplicação.
+    -Cliente,
+    -Pedido,
+    -NotaFiscal,
+    -Usuario
+- **Repository:** Classes ou interfaces que possuem a finalidade de interagir com tabelas no banco de dados: ClienteRepository
+- **Service:** Classes que contém regras de negócio e validação de nosso sistema: ClienteService possui  o método validar o CPF do cliente cadastrado.
+- **Controller:** Classes que possuem a finalidade de disponibilizar os nossos recursos da aplicação para outras aplicações via padrão HTTP.
+- **View**: Classes que possuem alguma interação com a interface gráfica acessada pelo usuário.
+- **Util:** Classes que contém recursos comuns à toda nossa aplicação.
 
 ### Identificação
 
-Uma das características de uma classe é a sua identificação, Cliente, NotaFiscal, TituloPagar. Porém, quando esta classe é organizada por pacotes, ela passa a ter duas identificações. O nome simples (**próprio nome**) e agora o nome qualificado (**endereçamento do pacote + nome**), exemplo: Considere a classe usuario que está endereçada no pacote: 
+Uma das características de uma classe é a sua identificação, Cliente, NotaFiscal, TituloPagar. Porém, quando esta classe é organizada por pacotes, ela passa a ter duas identificações. O nome simples (**próprio nome**) e agora o nome qualificado (**endereçamento do pacote + nome**), exemplo: Considere a classe usuario que está endereçada no pacote:
 
 com.controle.acesso.model, o nome qualificado desta classe é **com.controle.acesso.model.Usuario**
 
 ### Package versus Import
 
-A localização de uma calsse é definida pela palavra reservada packge, logo, uma classe só contém uma definição de pacote no arquivo, sempre na primeira linha do código. Para a utilização de uma classe existentes em outros pacotes, necessitamos realizar a importação das mesmas, seguindo a recomendação abaixo: 
+A localização de uma calsse é definida pela palavra reservada packge, logo, uma classe só contém uma definição de pacote no arquivo, sempre na primeira linha do código. Para a utilização de uma classe existentes em outros pacotes, necessitamos realizar a importação das mesmas, seguindo a recomendação abaixo:
 
 `  
     Exemplo:
@@ -141,4 +141,14 @@ A localização de uma calsse é definida pela palavra reservada packge, logo, u
 
 ### Por que é tão importante compreender de pacotes ?
 
-A linguagem Java é composta por milhares de classes internas, classes desenvolvidas em projetos disponíveis através de biblioteca e as classes do nosso projeto. Logo, existe uma enorme possibilidade da existênica de classes de mesmo nome. 
+A linguagem Java é composta por milhares de classes internas, classes desenvolvidas em projetos disponíveis através de biblioteca e as classes do nosso projeto. Logo, existe uma enorme possibilidade da existênica de classes de mesmo nome.
+
+## Visibilidade
+
+### Modificadores
+
+Em Java, utilizamos três palavras reservadas e um conceito default (sem nenhum palavra reservada) para definir os quatro tipo de visibilidade de atributos, métodos e até mesmo classes no que se refere ao acesso apor outras classes no que se refere ao acesso por outras classes. Iremos ilustrar dos mais nvisível ao mais restrito tipo de visibilidade nos arquivos em nosso projeto.
+
+Para uma melhor ilustração, iremos representar os contceitos de visibilidade de recursos através do contexto em uma lanchonete que vende lanche natural e suco.
+
+- **public:** quando nossa classe, método e atributo é definido como public, qualquer outra classe em qualquer outro pacote pode svisualizar tais recursos
