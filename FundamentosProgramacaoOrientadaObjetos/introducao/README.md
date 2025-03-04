@@ -151,4 +151,6 @@ Em Java, utilizamos três palavras reservadas e um conceito default (sem nenhum 
 
 Para uma melhor ilustração, iremos representar os contceitos de visibilidade de recursos através do contexto em uma lanchonete que vende lanche natural e suco.
 
-- **public:** quando nossa classe, método e atributo é definido como public, qualquer outra classe em qualquer outro pacote pode svisualizar tais recursos
+### Modificador public
+
+- quando nossa classe, método e atributo é definido como public, qualquer outra classe em qualquer outro pacote pode svisualizar tais recursos
