@@ -172,3 +172,22 @@ Conhecemos as ações disponiveis nas classses Cozinheiro, Almoxarife, Atendente
 - Que o Atendente precisa saber que antes de pagar o Cliente consulta o saldo App ?
 
 Diante destes questionamentos é que nossas classes precisam scontinuar antendo suas ações (métodos) mas nem todas precisam ser vistas por ninguém.
+
+## Getter e Setter
+
+Seguindo a conversão Java Beans
+
+Os métodos "Getters" e "Setters" são utilizados para buscar valores de atributos ou definir novas valores de atributos de instâncias de classes.
+
+O método **Getter** retorna o valor do atributo especificado.
+
+O método **Setter** define outro novo valor para o atributo especificado.
+
+Vemos o código abaixo da criação de um objeto Aluno com nome e idade:
+
+Seguindo a conversão Java Beans, uma classe que contém esta estrutura de estados deverá seguir as regras abaixo:
+
+- Os atributos precisam ter o modificador de acesso *private*. Ex.: private string nome.
+- Como agora os atributos estarão somente a nível de calsse, precisaremos dos métodos getX e setX, Ex.: getNome() e setNeme(String novoNome).
+- O método é responsável por obter o valor atual do atributo, logo ele precisa ser **public** retornar um tipo correspondente ao valor.
+- O método **set** é responsável por definir ou modificar o valor de um atributo em um objeto logo el também precisa ser **public**.
