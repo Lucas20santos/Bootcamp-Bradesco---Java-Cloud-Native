@@ -34,7 +34,9 @@ Toda a estrutura de código na linguagem java é distribuído em arquivos com ex
 As classes existentes em nosso projeto serão composta por:
 
 - **Classe** (class): A estrutura e ou representação que direciona a criação dos objetos de mesmo tipo.
-- **Identificador** (identity): Propósito existencial aos objetos que serão.
+- **Identificador**
+ (identi
+ ty): Propósito existencial aos objetos que serão.
 - **Características** (states): Também conhecido como **atributos** ou **propriedade**, é toda informação que representa o estado do objeto.
 - **Comportamentos** (behaviors): Também conhecido como **métodos** ou **ações**, é toda ação que o objeto pode realizar.
 - **Instanciar** (new): É o ato de criar um objeto a partir de estrutura definida em uma calsse.
@@ -212,3 +214,56 @@ Usamos Enum quando o nosso modleo de negócio contém objetos de mesmo contexto 
   - **Grau de Escolaridade**: Analfabeto, Fundamentea, Méido, Superior
   - **Estado Civil**: Soltero, Casado, DIvorcidado, Viúvo
   - **Estados Brasileiros**: São Paulo, Rio de Janeiro, Piauí, Maranhão.
+
+## UML
+
+Linguagem de Modelagem Unificada ou UML é uma notação que possibilita a representação gráfica do projeto.
+
+Na UML temos três conceitos necessários para compreendermos inicialmente:
+
+- **Diagrama**
+- **Elementos**
+
+- **Relacionamentos**
+
+As notações UML são distribuidas em duas categorias de diagramas, a estrutural e comportamental conforme listagem abaixo:
+
+- **Diagrama de classe:** O Diagrama de classes é utilizado para fazer representação de estruturas de classes de negócio, interfaces e outros componentes do sistema. Por esta característica, este diagrama é considerado o mais importante para a UML, pois auxilia a maioria dos demais diagramas.
+- **Diagrama de objetos:** Este diagrama representa os objetos existentes em um determinado instante ou fato na aplicação. Assim conseguimos ter uma perspectiva do estado de nossos objetos mediante a interação dos usuários com o sistema.
+
+### Diagrama de classes
+
+O diagrama de classes ilustra **graficamente** como classes serão estruturadas e interligadas entre si diante da proposta do nosso software.
+
+Em diagrama a estrutura das classes é constituída por:
+
+- **Identificação:** Nome e/ou finalidade da classe.
+- **Atributos:** Propriedades e/ou características.
+- **Operações:** Ações e/ou comportamentos.
+
+### Relacionamentos
+
+Em um diagrama as classes podem existir de forma independente, mas obviamente haverá em alguma etapa da aplicação a necessidade de algumas se relacionarem, o que devem compreender é o nível de dependência entre elas:
+
+- **Associação:** É uma relação entre duas classes, onde uma classe depende da outra.
+  - Associação simples - Navegação de A para B
+  - Associação Bidirecional
+  - Agregação - Em uma agregação a classe principal contém uma relação com outra classe, mas ela pode existir sem a classe agregadora. Imagina em um cadastro de candidatos, podemos encontrar candidatos que ainda não possuam uma Profissão.
+  - Composição - A composição já caracteriza uma dependência existencial entre a classe principal e a classe associada. Imaginamos que uma Admissão só poderá existir contendo suas informações básicas e a composição do Candidato selecionado.
+
+### Multiplicidade
+
+Nem sempre o relacionamento entre as classes será de **um para um**, um determinado cenário poderá exigir multiplicidades específicas conforme opções abaixo:
+
+- '1' -> Representa uma associação **contendo um elemento.**
+- '*' -> Representa uma associação **contendo um ou mais elementos.**
+- '0..1' -> Representa uma associação **contendo zero ou um elemento.**
+- '1..*' -> Representa uma associação **contendo um ou mais elementos.**
+
+### Níveis de Visibilidade
+
+Os atributos e métodos de uma classe podem receber níveis de visibilidade, e na UML existem símbolos que representam cada um deles:
+
+- (+) Visibilidade pública.
+- (-) Visibilidade privada.
+- (#) Visibilidade protegida.
