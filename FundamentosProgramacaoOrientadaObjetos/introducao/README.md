@@ -201,3 +201,14 @@ Classe novoObjeto = new Classe();
 Desta forma será criado um novo objeto na memória, este recuro também é conhecido como instanciar um novo objeto.
 
 Muitas das vezes já queremos que anacriação(intanciação) de um onbjeto, a linguagem já solicite para quem for criar este novo objeto defina algumas propriedades essenciais. Abaixo iremos ilustrar uma classe Pessoa onde a mesma teŕa os atributos: Nome, CPF, Endereço.
+
+## Enums
+
+Enum é um tipo especial de classe onde os objetos são previamente criados, imutáveis e disponíveis por toda aplicação.
+
+Usamos Enum quando o nosso modleo de negócio contém objetos de mesmo contexto que já existem de pŕe-estabelecida com a certeza de não haver tanta alteração de valores.
+
+- Exemplos:
+  - **Grau de Escolaridade**: Analfabeto, Fundamentea, Méido, Superior
+  - **Estado Civil**: Soltero, Casado, DIvorcidado, Viúvo
+  - **Estados Brasileiros**: São Paulo, Rio de Janeiro, Piauí, Maranhão.
