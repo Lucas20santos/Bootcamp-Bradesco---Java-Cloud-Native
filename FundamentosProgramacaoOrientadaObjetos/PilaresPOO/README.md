@@ -1,18 +1,10 @@
-## Getting Started
+# Pilares do POO
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+**Programação orientada a objetos** (**POO**, ou **OOP** segundo as suas siglas em inglês) é um paradigma de programação baseado no conceito de "objetos", que podem conter dados na forma de campos, chamados de atributos, e código, na forma de procedimentos, chamados de métodos.
 
-## Folder Structure
+## Os quatro pilares da programação orientada a objetos
 
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- Encapsulamento: É a capacidade de esconder detalhes de implementação de um objeto, expondo apenas as informações necessárias para o uso do objeto.
+- Herança: Características e comportamentos comuns podem ser elevados e compartilhados através de uma hierarquia de objetos.
+- Abstração: É a indisponibilidade para determinar a lógica de um ou vários comportamenteo em um objeto.
+- Polimorfismo: É a capacidade de um objeto poder ser referenciado de várias formas.
