@@ -8,3 +8,7 @@
 - Herança: Características e comportamentos comuns podem ser elevados e compartilhados através de uma hierarquia de objetos.
 - Abstração: É a indisponibilidade para determinar a lógica de um ou vários comportamenteo em um objeto.
 - Polimorfismo: É a capacidade de um objeto poder ser referenciado de várias formas.
+
+## Encapsulamento
+
+Nem tudo deve ser visível para todos.
