@@ -16,3 +16,11 @@ Nem tudo deve ser visível para todos.
 ## Herança
 
 Nem tudo se copia, ás vezes se herda.
+
+## Abstração
+
+Em java o conceito de abstração é dado pela palavra reservada `abstract` que pode ser usada para criar classes abstratas ou métodos abstratos.
+
+## Polimorfismo
+
+### Modificador protected
