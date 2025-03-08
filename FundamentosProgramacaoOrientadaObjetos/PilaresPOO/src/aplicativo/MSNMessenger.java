@@ -1,25 +1,5 @@
 package aplicativo;
 
-public class MSNMessenger {
-    public void enviarMensagem() 
-    {
-        this.validarConectadoInternet();
-        System.out.println("Enviando mensagem");
-        this.salvarHistoricoMensagem();
-    }
-
-    public void receberMensagem() 
-    {
-        System.out.println("Recebendo mensagem");
-        this.salvarHistoricoMensagem();
-    }
-
-    private void validarConectadoInternet() 
-    {
-        System.out.println("Validando conexão com a internet");
-    }
-    private void salvarHistoricoMensagem() 
-    {
-        System.out.println("Salvando mensagem");
-    }
+public class MSNMessenger extends ServicoMensagemInstantanea {
+    
 }

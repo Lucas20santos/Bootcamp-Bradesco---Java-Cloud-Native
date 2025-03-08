@@ -12,3 +12,7 @@
 ## Encapsulamento
 
 Nem tudo deve ser visível para todos.
+
+## Herança
+
+Nem tudo se copia, ás vezes se herda.
