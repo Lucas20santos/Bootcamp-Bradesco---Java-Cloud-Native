@@ -24,3 +24,11 @@ Em java o conceito de abstração é dado pela palavra reservada `abstract` que 
 ## Polimorfismo
 
 ### Modificador protected
+
+É um modificador de acesso que permite que um membro seja acessado apenas pela própria classe ou pelas classes que herdam dela.
+
+## Interfaces
+
+- São níveis mais altos de abstração.
+- Não possuem implementação.
+- São usadas para definir um contrato.
