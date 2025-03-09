@@ -46,11 +46,6 @@ public class ContaBancaria
         return usandoChequeEspecial;
     }
     
-    public void setUsandoChequeEspecial(boolean usandoChequeEspecial) 
-    {
-        this.usandoChequeEspecial = usandoChequeEspecial;
-    }
-    
     public double getPagarBoleto() 
     {
         return pagarBoleto;
