@@ -4,7 +4,7 @@ public class ContaBancaria
 {   
     private static int contador = 1;
 
-    // TODO:criar atributos privados para a classe ContaBancaria.
+    // TODO: #2criar atributos privados para a classe ContaBancaria.
     private double saldo = 0;
     private boolean usandoChequeEspecial = false;
     private double pagarBoleto = 0;
@@ -21,19 +21,17 @@ public class ContaBancaria
         this.numeroContaBancaria = contador++;
         this.contaAtiva = true;
     }
-
+    
+    // TODO: #4 #4criar métodos getters e setters para a classe ContaBancaria.
     public int getNumeroContaBancaria()
     {
         return numeroContaBancaria;
     }
+
+    //TODO: #5 #5criar métodos getters e setters para a classe ContaBancaria.
     public boolean isContaAtiva() 
     {
         return contaAtiva;
-    }
-
-    public void setContaAtiva(boolean contaAtiva) 
-    {
-        this.contaAtiva = contaAtiva;
     }
     
     public double getSaldo() 
