@@ -56,23 +56,14 @@ public class ContaBancaria
         this.pagarBoleto = pagarBoleto;
     }
     
+    // TODO: #8 #8criar métodos getters e setters para a classe ContaBancaria.
     public double getValorBoleto() 
     {
         return valorBoleto;
     }
-    
-    public void setValorBoleto(double valorBoleto) 
-    {
-        this.valorBoleto = valorBoleto;
-    }
-    
+        
     public double getChequeEspecial() 
     {
         return chequeEspecial;
-    }
-    
-    public void setChequeEspecial(double chequeEspecial) 
-    {
-        this.chequeEspecial = chequeEspecial;
     }
 }
