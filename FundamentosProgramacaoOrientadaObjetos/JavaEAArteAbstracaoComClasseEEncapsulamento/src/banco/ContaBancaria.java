@@ -34,16 +34,13 @@ public class ContaBancaria
         return contaAtiva;
     }
     
+    // TODO: #6 #6criar métodos getters e setters para a classe ContaBancaria.
     public double getSaldo() 
     {
         return saldo;
     }
-    
-    public void setSaldo(double saldo) 
-    {
-        this.saldo = saldo;
-    }
  
+    // TODO: #7 #7criar métodos getters e setters para a classe ContaBancaria.
     public boolean isUsandoChequeEspecial() 
     {
         return usandoChequeEspecial;
