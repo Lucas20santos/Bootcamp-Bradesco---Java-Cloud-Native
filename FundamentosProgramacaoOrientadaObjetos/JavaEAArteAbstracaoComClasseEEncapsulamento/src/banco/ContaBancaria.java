@@ -8,7 +8,7 @@ public class ContaBancaria
     private double pagarBoleto = 0;
     private double valorBoleto = 0;
     private double chequeEspecial = 0;
-    private static int numeroContaBancaria = 0;
+    private int numeroContaBancaria = 0;
     private boolean contaAtiva = false;
 
     /**
@@ -16,7 +16,7 @@ public class ContaBancaria
     */
     public ContaBancaria()
     {
-        numeroContaBancaria++;
+        this.numeroContaBancaria++;
         this.contaAtiva = true;
     }
 
