@@ -14,7 +14,7 @@ public class ContaBancaria
 
     public ContaBancaria()
     {
-        numeroContaBancaria++;
+        this.numeroContaBancaria = contador++;
         this.contaAtiva = true;
     }
     
