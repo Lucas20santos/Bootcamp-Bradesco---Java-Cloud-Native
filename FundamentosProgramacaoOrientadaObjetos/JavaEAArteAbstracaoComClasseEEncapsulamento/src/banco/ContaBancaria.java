@@ -2,13 +2,15 @@ package banco;
 
 public class ContaBancaria 
 {   
-    //TODO:criar atributos privados para a classe ContaBancaria.
+    private static int contador = 1;
+
+    // TODO:criar atributos privados para a classe ContaBancaria.
     private double saldo = 0;
     private boolean usandoChequeEspecial = false;
     private double pagarBoleto = 0;
     private double valorBoleto = 0;
     private double chequeEspecial = 0;
-    private static int numeroContaBancaria = 0;
+    private int numeroContaBancaria = 0;
     private boolean contaAtiva = false;
 
     /**
@@ -16,7 +18,7 @@ public class ContaBancaria
     */
     public ContaBancaria()
     {
-        numeroContaBancaria++;
+        this.numeroContaBancaria = contador++;
         this.contaAtiva = true;
     }
 
@@ -32,13 +34,6 @@ public class ContaBancaria
     public void setContaAtiva(boolean contaAtiva) 
     {
         this.contaAtiva = contaAtiva;
-    }
-
-
-
-    public void setNumeroContaBancaria(int numeroContaBancaria) 
-    {
-        this.numeroContaBancaria = numeroContaBancaria;
     }
     
     public double getSaldo() 
