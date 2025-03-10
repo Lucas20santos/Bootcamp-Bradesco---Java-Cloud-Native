@@ -5,6 +5,7 @@ public class ContaBancaria
     private static int contador = 1;
 
     private double saldo = 0;
+    private double depositar = 0;
     private boolean usandoChequeEspecial = false;
     private double pagarBoleto = 0;
     private double valorBoleto = 0;
@@ -17,7 +18,17 @@ public class ContaBancaria
         this.numeroContaBancaria = contador++;
         this.contaAtiva = true;
     }
-    
+
+    private double getDepositar()
+    {
+        return this.depositar;
+    }
+
+    private void setDepositar(double depositar)
+    {
+        this.saldo +=  depositar;
+    }
+
     private double getSaldo()
     {
         return this.saldo;
@@ -37,7 +48,6 @@ public class ContaBancaria
     {
         return this.contaAtiva;
     }
-
 
     public boolean isUsandoChequeEspecial() 
     {
@@ -64,10 +74,19 @@ public class ContaBancaria
         return this.chequeEspecial;
     }
 
+    // Métodos para realizar operações bancárias...
     public String depositar(double valor)
-    {   
-        this.setSaldo(valor);
-        return "Depósito de R$" + this.getSaldo() + " realizado com sucesso!";
+    {   this.depositar = valor;
+        
+        if(valor >= 0)
+        {
+            this.setDepositar(valor);
+            return "Depósito de R$" + this.getDepositar() + " realizado com sucesso!";
+        }
+        else
+        {
+            return "Valor inválido!";
+        }
     }
 
     public String sacar(double valor)
