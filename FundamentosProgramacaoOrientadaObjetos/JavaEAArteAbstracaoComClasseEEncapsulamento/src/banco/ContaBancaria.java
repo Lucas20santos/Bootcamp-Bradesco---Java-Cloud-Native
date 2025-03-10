@@ -18,6 +18,16 @@ public class ContaBancaria
         this.contaAtiva = true;
     }
     
+    private double getSaldo()
+    {
+        return this.saldo;
+    }
+
+    private void setSaldo(double valor)
+    {
+        this.saldo -= valor;
+    }
+    
     public int getNumeroContaBancaria()
     {
         return this.numeroContaBancaria;
@@ -28,10 +38,6 @@ public class ContaBancaria
         return this.contaAtiva;
     }
 
-    private double getSaldo() 
-    {
-        return this.saldo;
-    }
 
     public boolean isUsandoChequeEspecial() 
     {
@@ -59,18 +65,29 @@ public class ContaBancaria
     }
 
     public String depositar(double valor)
-    {
-        
+    {   
+        this.setSaldo(valor);
         return "Depósito de R$" + this.getSaldo() + " realizado com sucesso!";
     }
+
     public String sacar(double valor)
     {
-        return "Saque de R$" + valor + " realizado com sucesso!";
+        if(this.getSaldo() >= valor)
+        {
+            this.setSaldo(valor);
+            return "Saque de R$" + valor + " realizado com sucesso!";
+        }
+        else
+        {
+            return "Saldo insuficiente! Seu saldo é de R$" + this.getSaldo();
+        }
     }
+
     public String pagarBoleto(double valor)
     {
         return "Pagamento de boleto de R$" + valor + " realizado com sucesso!";
     }
+
     public String usarChequeEspecial(double valor)
     {
         return "Cheque especial de R$" + valor + " utilizado com sucesso!";
