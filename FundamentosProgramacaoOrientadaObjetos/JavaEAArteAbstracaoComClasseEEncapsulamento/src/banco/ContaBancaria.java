@@ -5,6 +5,7 @@ public class ContaBancaria
     private static int contador = 1;
 
     private double saldo = 0;
+    private double depositar = 0;
     private boolean usandoChequeEspecial = false;
     private double pagarBoleto = 0;
     private double valorBoleto = 0;
@@ -17,30 +18,45 @@ public class ContaBancaria
         this.numeroContaBancaria = contador++;
         this.contaAtiva = true;
     }
+
+    private double getDepositar()
+    {
+        return this.depositar;
+    }
+
+    private void setDepositar(double depositar)
+    {
+        this.saldo +=  depositar;
+    }
+
+    private double getSaldo()
+    {
+        return this.saldo;
+    }
+
+    private void setSaldo(double valor)
+    {
+        this.saldo -= valor;
+    }
     
     public int getNumeroContaBancaria()
     {
-        return numeroContaBancaria;
+        return this.numeroContaBancaria;
     }
 
     public boolean isContaAtiva() 
     {
-        return contaAtiva;
-    }
-
-    public double getSaldo() 
-    {
-        return saldo;
+        return this.contaAtiva;
     }
 
     public boolean isUsandoChequeEspecial() 
     {
-        return usandoChequeEspecial;
+        return this.usandoChequeEspecial;
     }
     
     public double getPagarBoleto() 
     {
-        return pagarBoleto;
+        return this.pagarBoleto;
     }
     
     public void setPagarBoleto(double pagarBoleto) 
@@ -50,26 +66,47 @@ public class ContaBancaria
     
     public double getValorBoleto() 
     {
-        return valorBoleto;
+        return this.valorBoleto;
     }
 
     public double getChequeEspecial() 
     {
-        return chequeEspecial;
+        return this.chequeEspecial;
     }
 
+    // Métodos para realizar operações bancárias...
     public String depositar(double valor)
-    {
-        return "Depósito de R$" + valor + " realizado com sucesso!";
+    {   this.depositar = valor;
+        
+        if(valor >= 0)
+        {
+            this.setDepositar(valor);
+            return "Depósito de R$" + this.getDepositar() + " realizado com sucesso!";
+        }
+        else
+        {
+            return "Valor inválido!";
+        }
     }
+
     public String sacar(double valor)
     {
-        return "Saque de R$" + valor + " realizado com sucesso!";
+        if(this.getSaldo() >= valor)
+        {
+            this.setSaldo(valor);
+            return "Saque de R$" + valor + " realizado com sucesso!";
+        }
+        else
+        {
+            return "Saldo insuficiente! Seu saldo é de R$" + this.getSaldo();
+        }
     }
+
     public String pagarBoleto(double valor)
     {
         return "Pagamento de boleto de R$" + valor + " realizado com sucesso!";
     }
+
     public String usarChequeEspecial(double valor)
     {
         return "Cheque especial de R$" + valor + " utilizado com sucesso!";
@@ -81,7 +118,7 @@ public class ContaBancaria
         {
             System.out.println("Digite o valor do depósito:");
             double valor = Double.parseDouble(System.console().readLine());
-            System.out.println(depositar(valor));
+            System.out.println(this.depositar(valor));
         }
         else if(opcao == 2)
         {
