@@ -1,16 +1,43 @@
 import banco.ContaBancaria;
-
 public class Usuarios
 {
     public static void main(String[] args) 
     {
-        var us1 = new ContaBancaria();
-        var us2 = new ContaBancaria();
-        var us3 = new ContaBancaria();
+        while (true) 
+        {
+            System.out.println("Você deseja criar uma conta bancária? (s/n)");
+            String resposta = System.console().readLine();
+            if (resposta.equals("n"))
+            {
+                break;
+            }
+            ContaBancaria conta = new ContaBancaria();
+            System.out.println("Conta bancária criada com sucesso!");
+            System.out.println("Número da conta bancária: " + conta.getNumeroContaBancaria());
 
-        System.out.println(us1.getNumeroContaBancaria());
-        System.out.println(us2.getNumeroContaBancaria());
-        System.out.println(us3.getNumeroContaBancaria());
+            while (true)
+            {
+                System.out.println("Digite a opção desejada:");
+                System.out.println("1 - Depositar");
+                System.out.println("2 - Sacar");
+                System.out.println("3 - Pagar boleto");
+                System.out.println("4 - Usar cheque especial");
+                System.out.println("5 - Ver saldo");
+                System.out.println("6 - Encerrar conta bancária");
+
+                int opcao = Integer.parseInt(System.console().readLine());
+                if (opcao < 1 || opcao > 6)
+                {
+                    System.out.println("Opção inválida!");
+                    continue;
+                }
+                else if (opcao == 6)
+                {
+                    System.out.println("Conta bancária encerrada com sucesso!");
+                    break;
+                }
+                conta.menu(opcao);
+            }
+        }
     }
-
 }
