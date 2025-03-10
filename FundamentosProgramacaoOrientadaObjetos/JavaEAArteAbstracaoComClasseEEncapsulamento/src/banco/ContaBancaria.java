@@ -20,27 +20,27 @@ public class ContaBancaria
     
     public int getNumeroContaBancaria()
     {
-        return numeroContaBancaria;
+        return this.numeroContaBancaria;
     }
 
     public boolean isContaAtiva() 
     {
-        return contaAtiva;
+        return this.contaAtiva;
     }
 
-    public double getSaldo() 
+    private double getSaldo() 
     {
-        return saldo;
+        return this.saldo;
     }
 
     public boolean isUsandoChequeEspecial() 
     {
-        return usandoChequeEspecial;
+        return this.usandoChequeEspecial;
     }
     
     public double getPagarBoleto() 
     {
-        return pagarBoleto;
+        return this.pagarBoleto;
     }
     
     public void setPagarBoleto(double pagarBoleto) 
@@ -50,17 +50,18 @@ public class ContaBancaria
     
     public double getValorBoleto() 
     {
-        return valorBoleto;
+        return this.valorBoleto;
     }
 
     public double getChequeEspecial() 
     {
-        return chequeEspecial;
+        return this.chequeEspecial;
     }
 
     public String depositar(double valor)
     {
-        return "Depósito de R$" + valor + " realizado com sucesso!";
+        
+        return "Depósito de R$" + this.getSaldo() + " realizado com sucesso!";
     }
     public String sacar(double valor)
     {
@@ -81,7 +82,7 @@ public class ContaBancaria
         {
             System.out.println("Digite o valor do depósito:");
             double valor = Double.parseDouble(System.console().readLine());
-            System.out.println(depositar(valor));
+            System.out.println(this.depositar(valor));
         }
         else if(opcao == 2)
         {
