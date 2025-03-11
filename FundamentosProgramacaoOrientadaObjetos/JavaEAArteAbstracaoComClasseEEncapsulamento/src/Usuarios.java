@@ -11,7 +11,10 @@ public class Usuarios
             {
                 break;
             }
-            ContaBancaria conta = new ContaBancaria();
+            System.out.println("Antes informe o valor do deposito para iniciarmos sua conta: ");
+            double valorDeposito = Double.parseDouble(System.console().readLine());
+
+            ContaBancaria conta = new ContaBancaria(valorDeposito);
             System.out.println("Conta bancária criada com sucesso!");
             System.out.println("Número da conta bancária: " + conta.getNumeroContaBancaria());
 
