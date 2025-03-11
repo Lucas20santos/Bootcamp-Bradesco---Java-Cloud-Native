@@ -3,7 +3,6 @@ package banco;
 public class ContaBancaria 
 {   
     private static int contador = 1;
-    private static double limeteChequeEspecial = 500;
 
     private double saldo = 0;
     private double depositar = 0;
@@ -19,6 +18,15 @@ public class ContaBancaria
         this.numeroContaBancaria = contador++;
         this.contaAtiva = true;
         this.setDepositar(valorDeposito);
+        if (valorDeposito < 500)
+        {
+            this.chequeEspecial = 50 + this.saldo;
+        }
+        else
+        {
+            this.chequeEspecial = 0.5 * valorDeposito + this.saldo;
+        }
+        this.saldo = this.getChequeEspecial();
     }
 
     private double getDepositar()
