@@ -38,7 +38,17 @@ public class ContaBancaria
     {
         this.saldo -= valor;
     }
+
+    private double getPagarBoleto() 
+    {
+        return this.pagarBoleto;
+    }
     
+    private void setPagarBoleto(double pagarBoleto) 
+    {
+        this.pagarBoleto = pagarBoleto;
+    }
+
     public int getNumeroContaBancaria()
     {
         return this.numeroContaBancaria;
@@ -53,16 +63,7 @@ public class ContaBancaria
     {
         return this.usandoChequeEspecial;
     }
-    
-    public double getPagarBoleto() 
-    {
-        return this.pagarBoleto;
-    }
-    
-    public void setPagarBoleto(double pagarBoleto) 
-    {
-        this.pagarBoleto = pagarBoleto;
-    }
+   
     
     public double getValorBoleto() 
     {
@@ -102,9 +103,20 @@ public class ContaBancaria
         }
     }
 
-    public String pagarBoleto(double valor)
+    public void pagarBoleto()
     {
-        return "Pagamento de boleto de R$" + valor + " realizado com sucesso!";
+        System.out.println("O valor do boleto é de R$" + this.getPagarBoleto());
+        System.out.println("O seu saldo é: " + this.getSaldo());
+
+        if(this.getSaldo() >= this.getPagarBoleto())
+        {
+            this.setSaldo(this.getPagarBoleto());
+            System.out.println("Boleto pago com sucesso!");
+        }
+        else
+        {
+            System.out.println("Saldo insuficiente! Favor realizar um depósito ou use o cheque especial");
+        }
     }
 
     public String usarChequeEspecial(double valor)
@@ -130,7 +142,8 @@ public class ContaBancaria
         {
             System.out.println("Digite o valor do boleto:");
             valorBoleto = Double.parseDouble(System.console().readLine());
-            System.out.println(pagarBoleto(valorBoleto));
+            this.setPagarBoleto(valorBoleto);
+            this.pagarBoleto();
         }
         else if(opcao == 4)
         {
