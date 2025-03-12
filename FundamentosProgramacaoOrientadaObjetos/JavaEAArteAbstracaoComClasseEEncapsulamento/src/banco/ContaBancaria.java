@@ -26,7 +26,6 @@ public class ContaBancaria
         {
             this.chequeEspecial = 0.5 * valorDeposito + this.saldo;
         }
-        this.saldo = this.getChequeEspecial();
     }
 
     private double getDepositar()
@@ -199,5 +198,13 @@ public class ContaBancaria
             System.out.println("Conta bancária encerrada com sucesso!");
             contaAtiva = false;
         }
+    }
+
+    public void extrato()
+    {
+        System.out.println("Extrato:");
+        System.out.println("Número da conta bancária: " + getNumeroContaBancaria());
+        System.out.println("Saldo: R$" + getSaldo());
+        System.out.println("Cheque especial: R$" + getChequeEspecial());
     }
 }

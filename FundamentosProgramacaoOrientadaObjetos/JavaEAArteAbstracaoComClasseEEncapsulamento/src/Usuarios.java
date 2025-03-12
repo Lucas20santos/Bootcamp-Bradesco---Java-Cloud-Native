@@ -16,7 +16,7 @@ public class Usuarios
 
             ContaBancaria conta = new ContaBancaria(valorDeposito);
             System.out.println("Conta bancária criada com sucesso!");
-            System.out.println("Número da conta bancária: " + conta.getNumeroContaBancaria());
+            conta.extrato();
 
             while (true)
             {
