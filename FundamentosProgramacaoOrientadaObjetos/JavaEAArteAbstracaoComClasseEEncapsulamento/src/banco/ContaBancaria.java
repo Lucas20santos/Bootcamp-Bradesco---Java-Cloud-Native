@@ -13,10 +13,19 @@ public class ContaBancaria
     private int numeroContaBancaria = 0;
     private boolean contaAtiva = false;
 
-    public ContaBancaria()
+    public ContaBancaria(double valorDeposito)
     {
         this.numeroContaBancaria = contador++;
         this.contaAtiva = true;
+        this.setDepositar(valorDeposito);
+        if (valorDeposito < 500)
+        {
+            this.chequeEspecial = 50 + this.saldo;
+        }
+        else
+        {
+            this.chequeEspecial = 0.5 * valorDeposito + this.saldo;
+        }
     }
 
     private double getDepositar()
@@ -63,8 +72,12 @@ public class ContaBancaria
     {
         return this.usandoChequeEspecial;
     }
-   
-    
+
+    public void setUsandoChequeEspecial(boolean usandoChequeEspecial) 
+    {
+        this.usandoChequeEspecial = usandoChequeEspecial;
+    }
+
     public double getValorBoleto() 
     {
         return this.valorBoleto;
@@ -73,6 +86,11 @@ public class ContaBancaria
     public double getChequeEspecial() 
     {
         return this.chequeEspecial;
+    }
+
+    public void setChequeEspecial(double chequeEspecial) 
+    {
+        this.chequeEspecial = chequeEspecial;
     }
 
     // Métodos para realizar operações bancárias...
@@ -99,7 +117,17 @@ public class ContaBancaria
         }
         else
         {
+            System.out.println("Deseja usar o cheque especial? (s/n)");
+            String resposta = System.console().readLine().toLowerCase();
+
+            if(resposta == "s")
+            {
+                this.isUsandoChequeEspecial();
+                
+                return "Cheque especial de R$" + this.getChequeEspecial() + " utilizado com sucesso!";
+            }
             return "Saldo insuficiente! Seu saldo é de R$" + this.getSaldo();
+
         }
     }
 
@@ -119,9 +147,18 @@ public class ContaBancaria
         }
     }
 
-    public String usarChequeEspecial(double valor)
+    public String usarChequeEspecial()
     {
-        return "Cheque especial de R$" + valor + " utilizado com sucesso!";
+        this.setUsandoChequeEspecial(true);
+        if(this.getChequeEspecial() >= this.getValorBoleto())
+        {
+            this.setChequeEspecial(this.getValorBoleto());
+            return "Cheque especial de R$" + this.getChequeEspecial() + " utilizado com sucesso!";
+        }
+        else
+        {
+            return "Cheque especial insuficiente! Seu cheque especial é de R$" + this.getChequeEspecial();
+        }
     }
 
     public void menu(int opcao)
@@ -149,7 +186,7 @@ public class ContaBancaria
         {
             System.out.println("Digite o valor do cheque especial:");
             chequeEspecial = Double.parseDouble(System.console().readLine());
-            System.out.println(usarChequeEspecial(chequeEspecial));
+            System.out.println(usarChequeEspecial());
         }
         else if(opcao == 5)
         {
@@ -161,5 +198,13 @@ public class ContaBancaria
             System.out.println("Conta bancária encerrada com sucesso!");
             contaAtiva = false;
         }
+    }
+
+    public void extrato()
+    {
+        System.out.println("Extrato:");
+        System.out.println("Número da conta bancária: " + getNumeroContaBancaria());
+        System.out.println("Saldo: R$" + getSaldo());
+        System.out.println("Cheque especial: R$" + getChequeEspecial());
     }
 }
