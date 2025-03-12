@@ -73,7 +73,6 @@ public class ContaBancaria
     {
         return this.usandoChequeEspecial;
     }
-   
     
     public double getValorBoleto() 
     {
@@ -109,7 +108,17 @@ public class ContaBancaria
         }
         else
         {
+            System.out.println("Deseja usar o cheque especial? (s/n)");
+            String resposta = System.console().readLine().toLowerCase();
+
+            if(resposta == "s")
+            {
+                this.isUsandoChequeEspecial();
+                
+                return "Cheque especial de R$" + this.getChequeEspecial() + " utilizado com sucesso!";
+            }
             return "Saldo insuficiente! Seu saldo é de R$" + this.getSaldo();
+
         }
     }
 
