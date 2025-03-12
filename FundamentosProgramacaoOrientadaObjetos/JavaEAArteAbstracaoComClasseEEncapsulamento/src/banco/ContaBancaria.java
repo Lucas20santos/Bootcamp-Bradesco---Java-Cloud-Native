@@ -84,6 +84,11 @@ public class ContaBancaria
         return this.chequeEspecial;
     }
 
+    public void setChequeEspecial(double chequeEspecial) 
+    {
+        this.chequeEspecial = chequeEspecial;
+    }
+
     // Métodos para realizar operações bancárias...
     public String depositar(double valor)
     {   this.depositar = valor;
@@ -135,12 +140,27 @@ public class ContaBancaria
         else
         {
             System.out.println("Saldo insuficiente! Favor realizar um depósito ou use o cheque especial");
+            System.out.println("Deseja usar o cheque especial? (s/n)");
+            String resposta = System.console().readLine().toLowerCase();
+            if(resposta == "s")
+            {
+                this.isUsandoChequeEspecial();
+                this.usarChequeEspecial();
+            }
         }
     }
 
-    public String usarChequeEspecial(double valor)
+    public String usarChequeEspecial()
     {
-        return "Cheque especial de R$" + valor + " utilizado com sucesso!";
+        if(this.getChequeEspecial() >= this.getValorBoleto())
+        {
+            this.setChequeEspecial(this.getValorBoleto());
+            return "Cheque especial de R$" + this.getChequeEspecial() + " utilizado com sucesso!";
+        }
+        else
+        {
+            return "Cheque especial insuficiente! Seu cheque especial é de R$" + this.getChequeEspecial();
+        }
     }
 
     public void menu(int opcao)
