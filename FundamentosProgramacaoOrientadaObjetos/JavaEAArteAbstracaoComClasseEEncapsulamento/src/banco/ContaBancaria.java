@@ -73,7 +73,12 @@ public class ContaBancaria
     {
         return this.usandoChequeEspecial;
     }
-    
+
+    public void setUsandoChequeEspecial(boolean usandoChequeEspecial) 
+    {
+        this.usandoChequeEspecial = usandoChequeEspecial;
+    }
+
     public double getValorBoleto() 
     {
         return this.valorBoleto;
@@ -140,18 +145,12 @@ public class ContaBancaria
         else
         {
             System.out.println("Saldo insuficiente! Favor realizar um depósito ou use o cheque especial");
-            System.out.println("Deseja usar o cheque especial? (s/n)");
-            String resposta = System.console().readLine().toLowerCase();
-            if(resposta == "s")
-            {
-                this.isUsandoChequeEspecial();
-                this.usarChequeEspecial();
-            }
         }
     }
 
     public String usarChequeEspecial()
     {
+        this.setUsandoChequeEspecial(true);
         if(this.getChequeEspecial() >= this.getValorBoleto())
         {
             this.setChequeEspecial(this.getValorBoleto());
@@ -188,7 +187,7 @@ public class ContaBancaria
         {
             System.out.println("Digite o valor do cheque especial:");
             chequeEspecial = Double.parseDouble(System.console().readLine());
-            System.out.println(usarChequeEspecial(chequeEspecial));
+            System.out.println(usarChequeEspecial());
         }
         else if(opcao == 5)
         {
