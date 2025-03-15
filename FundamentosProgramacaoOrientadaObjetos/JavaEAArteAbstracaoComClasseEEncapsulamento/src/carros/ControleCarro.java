@@ -65,6 +65,8 @@ public class ControleCarro {
 
     public void acelerarCarro()
     {
+        this.setAcelerar(true);
+
         if (this.isLigado() == true)
         {
             if (this.isAcelerar() == true && this.velocidade < 120)
@@ -80,6 +82,8 @@ public class ControleCarro {
 
     public void frearCarro()
     {
+        this.setFrear(true);
+
         if (this.isLigado() == true)
         {
             if (this.isFrear() == true && this.velocidade > 0)
@@ -91,5 +95,13 @@ public class ControleCarro {
         {
             this.velocidade = 0;
         }
+    }
+
+    public void status()
+    {
+        System.out.println("Ligado: " + this.isLigado());
+        System.out.println("Velocidade: " + this.getVelocidade());
+        System.out.println("Marcha: " + this.getMarcha());
+        System.out.println("Sentido: " + this.getSenditoCarro());
     }
 }
