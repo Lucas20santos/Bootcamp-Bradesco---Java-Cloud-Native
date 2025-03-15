@@ -21,7 +21,7 @@ public class ControleCarro
         return frear;
     }
 
-    private void setFrear(boolean frear) 
+    private void setFrear(boolean frear)
     {
         this.frear = frear;
     }
@@ -76,16 +76,21 @@ public class ControleCarro
         this.marcha = marcha;
     }
 
-    public void  ligarCarro()
+    public void ligarCarro()
     {
         this.setLigado(true);
     }
 
     public void desligarCarro()
     {
-        this.setLigado(false);
-        this.velocidade = 0;
-        this.marcha = "Ponto morto";
+        if(this.getMarcha() == "Ponto morto" && this.getVelocidade() == 0)
+        {
+            this.setLigado(false);
+        }
+        else
+        {
+            System.out.println("Desligue o carro antes de descer");
+        }
     }
 
     public void acelerarCarro()
