@@ -7,13 +7,13 @@ public class ControleCarro
     boolean acelerar = false;
     int velocidade = 0;
     String senditoCarro = "Frente";
-    int marcha = 0;
+    String marcha = "Ponto morto";
 
     public ControleCarro() 
     {
         this.ligado = false;
-        this.senditoCarro = "Ponto morto";
-        this.velocidade = 0;
+        this.marcha = "Ponto morto";
+        this.velocidade = 20;
     }
 
     private boolean isFrear()
@@ -61,17 +61,17 @@ public class ControleCarro
         return senditoCarro;
     }
 
-    public void setSenditoCarro(String senditoCarro) 
+    private void setSenditoCarro(String senditoCarro) 
     {
         this.senditoCarro = senditoCarro;
     }
 
-    public int getMarcha() 
+    private String getMarcha() 
     {
         return marcha;
     }
 
-    public void setMarcha(int marcha)
+    private void setMarcha(String marcha)
     {
         this.marcha = marcha;
     }
@@ -85,83 +85,77 @@ public class ControleCarro
     {
         this.setLigado(false);
         this.velocidade = 0;
-        this.marcha = 0;
+        this.marcha = "Ponto morto";
     }
 
     public void acelerarCarro()
     {
-        this.setAcelerar(true);
-
         if (this.isLigado() == true)
         {
+            this.setAcelerar(true);
             if (this.isAcelerar() == true && this.getVelocidade() < 120)
             {
                 this.setVelocidade(this.getVelocidade() + 1);
-
-                if (this.velocidade == 0) this.trocarMarcha();
-                if (this.velocidade == 20) this.trocarMarcha();
-                if (this.velocidade == 40) this.trocarMarcha();
-                if (this.velocidade == 60) this.trocarMarcha();
-                if (this.velocidade == 80) this.trocarMarcha();
-                if (this.velocidade == 100) this.trocarMarcha();
-                if (this.velocidade == 120) this.trocarMarcha();
+                this.trocarMarcha();
             }
-        }
-        else
-        {
-            this.velocidade = 0;
-            this.marcha = 0;
         }
     }
 
     public void frearCarro()
     {
-        this.setFrear(true);
-
         if (this.isLigado() == true)
         {
+            this.setFrear(true);
             if (this.isFrear() == true && this.velocidade > 0)
             {
-                this.velocidade = this.velocidade - 1;
+                this.setVelocidade(this.getVelocidade() - 1);
+                this.trocarMarcha();
             }
-        }
-        else
-        {
-            this.velocidade = 0;
         }
     }
 
     public void trocarMarcha()
     {
-        if(this.getVelocidade() == 1)
+        if(this.isLigado())
         {
-            System.out.println("Trocando marcha para 1");
-            this.marcha = 1;
-        }
-        else if (this.getVelocidade() == 21)
-        {
-            System.out.println("Trocando marcha para 2");
-            this.marcha = 2;
-        }
-        else if (this.getVelocidade() == 41)
-        {
-            System.out.println("Trocando marcha para 3");
-            this.marcha = 3;
-        }
-        else if (this.getVelocidade() >= 61)
-        {
-            System.out.println("Trocando marcha para 4");
-            this.marcha = 4;
-        }
-        else if (this.getVelocidade() == 81)
-        {
-            System.out.println("Trocando marcha para 5");
-            this.marcha = 5;
-        }
-        else if (this.getVelocidade() == 101)
-        {
-            System.out.println("Trocando marcha para 6");
-            this.marcha = 6;
+            if (this.getVelocidade() == 0)
+            {
+                System.out.println("Trocando marcha para ponto morto");
+                this.setMarcha("Ponto morto");
+                this.setSenditoCarro("Ponto morto");
+                this.setAcelerar(false);
+                this.setFrear(false);
+            }
+            else if(this.getVelocidade() == 1)
+            {
+                System.out.println("Trocando marcha para 1");
+                this.setMarcha("1");
+            }
+            else if (this.getVelocidade() == 21)
+            {
+                System.out.println("Trocando marcha para 2");
+                this.setMarcha("2");
+            }
+            else if (this.getVelocidade() == 41)
+            {
+                System.out.println("Trocando marcha para 3");
+                this.setMarcha("3");
+            }
+            else if (this.getVelocidade() >= 61)
+            {
+                System.out.println("Trocando marcha para 4");
+                this.setMarcha("4");
+            }
+            else if (this.getVelocidade() == 81)
+            {
+                System.out.println("Trocando marcha para 5");
+                this.setMarcha("5");
+            }
+            else if (this.getVelocidade() == 101)
+            {
+                System.out.println("Trocando marcha para 6");
+                this.setMarcha("6");
+            }
         }
     }
 
