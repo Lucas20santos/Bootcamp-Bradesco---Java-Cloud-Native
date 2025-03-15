@@ -1,22 +1,13 @@
 package carros;
 
-public class ControleCarro {
+public class ControleCarro 
+{
+    boolean frear = false;
     boolean ligado = false;
     boolean acelerar = false;
-    boolean frear = false;
-
-    public boolean isFrear()
-    {
-        return frear;
-    }
-    public void setFrear(boolean frear) 
-    {
-        this.frear = frear;
-    }
-
     int velocidade = 0;
     String senditoCarro = "Frente";
-    String marcha = "Neutro";
+    int marcha = 0;
 
     public ControleCarro() 
     {
@@ -24,45 +15,77 @@ public class ControleCarro {
         this.senditoCarro = "Ponto morto";
         this.velocidade = 0;
     }
-    public boolean isLigado() 
+
+    private boolean isFrear()
+    {
+        return frear;
+    }
+
+    private void setFrear(boolean frear) 
+    {
+        this.frear = frear;
+    }
+
+    private boolean isLigado() 
     {
         return ligado;
     }
-    public void setLigado(boolean ligado) 
+
+    private void setLigado(boolean ligado) 
     {
         this.ligado = ligado;
     }
-    public boolean isAcelerar() 
+
+    private boolean isAcelerar() 
     {
         return acelerar;
     }
-    public void setAcelerar(boolean acelerar) 
+
+    private void setAcelerar(boolean acelerar) 
     {
         this.acelerar = acelerar;
     }
-    public int getVelocidade() 
+
+    private int getVelocidade() 
     {
         return velocidade;
     }
-    public void setVelocidade(int velocidade) 
+
+    private void setVelocidade(int velocidade) 
     {
         this.velocidade = velocidade;
     }
-    public String getSenditoCarro() 
+
+    private String getSenditoCarro() 
     {
         return senditoCarro;
     }
+
     public void setSenditoCarro(String senditoCarro) 
     {
         this.senditoCarro = senditoCarro;
     }
-    public String getMarcha() 
+
+    public int getMarcha() 
     {
         return marcha;
     }
-    public void setMarcha(String marcha) 
+
+    public void setMarcha(int marcha)
     {
         this.marcha = marcha;
+    }
+
+    public void  ligarCarro()
+    {
+        this.setLigado(true);
+    }
+
+    public void desligarCarro()
+    {
+        this.setLigado(false);
+        this.velocidade = 0;
+        this.marcha = 0;
     }
 
     public void acelerarCarro()
@@ -71,14 +94,23 @@ public class ControleCarro {
 
         if (this.isLigado() == true)
         {
-            if (this.isAcelerar() == true && this.velocidade < 120)
+            if (this.isAcelerar() == true && this.getVelocidade() < 120)
             {
-                this.velocidade = this.velocidade + 1;
+                this.setVelocidade(this.getVelocidade() + 1);
+
+                if (this.velocidade == 0) this.trocarMarcha();
+                if (this.velocidade == 20) this.trocarMarcha();
+                if (this.velocidade == 40) this.trocarMarcha();
+                if (this.velocidade == 60) this.trocarMarcha();
+                if (this.velocidade == 80) this.trocarMarcha();
+                if (this.velocidade == 100) this.trocarMarcha();
+                if (this.velocidade == 120) this.trocarMarcha();
             }
         }
         else
         {
             this.velocidade = 0;
+            this.marcha = 0;
         }
     }
 
@@ -96,6 +128,40 @@ public class ControleCarro {
         else
         {
             this.velocidade = 0;
+        }
+    }
+
+    public void trocarMarcha()
+    {
+        if(this.getVelocidade() == 1)
+        {
+            System.out.println("Trocando marcha para 1");
+            this.marcha = 1;
+        }
+        else if (this.getVelocidade() == 21)
+        {
+            System.out.println("Trocando marcha para 2");
+            this.marcha = 2;
+        }
+        else if (this.getVelocidade() == 41)
+        {
+            System.out.println("Trocando marcha para 3");
+            this.marcha = 3;
+        }
+        else if (this.getVelocidade() >= 61)
+        {
+            System.out.println("Trocando marcha para 4");
+            this.marcha = 4;
+        }
+        else if (this.getVelocidade() == 81)
+        {
+            System.out.println("Trocando marcha para 5");
+            this.marcha = 5;
+        }
+        else if (this.getVelocidade() == 101)
+        {
+            System.out.println("Trocando marcha para 6");
+            this.marcha = 6;
         }
     }
 
