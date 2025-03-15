@@ -9,7 +9,7 @@ public class ControleCarro
     String senditoCarro = "Frente";
     String marcha = "Ponto morto";
 
-    public ControleCarro() 
+    public ControleCarro()
     {
         this.ligado = false;
         this.marcha = "Ponto morto";
