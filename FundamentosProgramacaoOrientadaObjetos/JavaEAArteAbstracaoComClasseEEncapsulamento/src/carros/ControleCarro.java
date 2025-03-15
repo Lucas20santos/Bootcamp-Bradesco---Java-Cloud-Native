@@ -5,10 +5,12 @@ public class ControleCarro {
     boolean acelerar = false;
     boolean frear = false;
 
-    public boolean isFrear() {
+    public boolean isFrear()
+    {
         return frear;
     }
-    public void setFrear(boolean frear) {
+    public void setFrear(boolean frear) 
+    {
         this.frear = frear;
     }
 
@@ -103,5 +105,7 @@ public class ControleCarro {
         System.out.println("Velocidade: " + this.getVelocidade());
         System.out.println("Marcha: " + this.getMarcha());
         System.out.println("Sentido: " + this.getSenditoCarro());
+        System.out.println("Acelerar: " + this.isAcelerar());
+        System.out.println("Frear: " + this.isFrear());
     }
 }
