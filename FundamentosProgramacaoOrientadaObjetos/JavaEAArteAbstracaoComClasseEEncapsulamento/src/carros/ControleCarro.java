@@ -13,7 +13,7 @@ public class ControleCarro
     {
         this.ligado = false;
         this.marcha = "Ponto morto";
-        this.velocidade = 20;
+        this.velocidade = 0;
     }
 
     private boolean isFrear()
@@ -61,7 +61,7 @@ public class ControleCarro
         return senditoCarro;
     }
 
-    private void setSenditoCarro(String senditoCarro) 
+    private void setSenditoCarro(String senditoCarro)
     {
         this.senditoCarro = senditoCarro;
     }
@@ -127,7 +127,6 @@ public class ControleCarro
             {
                 System.out.println("Trocando marcha para ponto morto");
                 this.setMarcha("Ponto morto");
-                this.setSenditoCarro("Ponto morto");
                 this.setAcelerar(false);
                 this.setFrear(false);
             }
@@ -164,12 +163,58 @@ public class ControleCarro
         }
     }
 
-    private void status()
+    private void trocarDirecao()
+    {
+        if(this.isLigado())
+        {
+            System.out.println("1 - Para frente");
+            System.out.println("2 - Para trás");
+            System.out.println("3 - Para a direita");
+            System.out.println("4 - Para a esquerda");
+
+            int opcao = Integer.parseInt(System.console().readLine());
+
+            switch (opcao)
+            {
+                case 1:
+                    this.setSenditoCarro("Frente");
+                    break;
+                case 2:
+                    this.setSenditoCarro("Trás");
+                    break;
+                case 3:
+                    if(this.getVelocidade() >= 0 && this.getVelocidade() <= 40)
+                    {
+                        this.setSenditoCarro("Direita");
+                    }
+                    else
+                    {
+                        System.out.println("Velocidade muito alta para virar a direita");
+                    }
+                    break;
+                case 4:
+                if(this.getVelocidade() >= 0 && this.getVelocidade() <= 40)
+                {
+                    this.setSenditoCarro("Esquerda");
+                }
+                else
+                {
+                    System.out.println("Velocidade muito alta para virar a direita");
+                }
+                    break;
+                default:
+                    System.out.println("Opção inválida");
+                    break;
+            }
+        }
+    }
+
+    public void status()
     {
         System.out.println("Ligado: " + this.isLigado());
         System.out.println("Velocidade: " + this.getVelocidade());
         System.out.println("Marcha: " + this.getMarcha());
-        System.out.println("Sentido: " + this.getSenditoCarro());
+        System.out.println("Frente: " + this.getSenditoCarro());
         System.out.println("Acelerar: " + this.isAcelerar());
         System.out.println("Frear: " + this.isFrear());
     }
@@ -203,6 +248,9 @@ public class ControleCarro
                 this.status();
                 break;
             case 6:
+                this.trocarDirecao();
+                break;
+            case 7:
                 System.exit(0);
                 break;
             default:
