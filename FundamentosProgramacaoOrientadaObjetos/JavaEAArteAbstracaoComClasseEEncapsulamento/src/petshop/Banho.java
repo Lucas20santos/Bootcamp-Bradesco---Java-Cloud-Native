@@ -5,8 +5,8 @@ public class Banho
     private boolean banhoPet = false;
     private double abastecimentoResevatorioAgua = 0;
     private double abastecimentoResevatorioShampoo = 0;
-    private double nivelAgua = 0;
-    private double nivelShampoo = 0;
+    private double nivelAgua = 30;
+    private double nivelShampoo = 10;
     private boolean banho = false;
     private boolean petNaMaquina = false;
     private boolean petForaMaquina = false;
@@ -15,104 +15,121 @@ public class Banho
     public Banho()
     {
         this.banhoPet = false;
-        this.abastecimentoResevatorioAgua = 0;
-        this.abastecimentoResevatorioShampoo = 0;
-        this.nivelAgua = 0;
-        this.nivelShampoo = 0;
         this.banho = false;
         this.petNaMaquina = false;
         this.petForaMaquina = false;
         this.limparMaquina = false;
     }
 
-    public boolean isBanhoPet()
+    private boolean isBanhoPet()
     {
         return banhoPet;
     }
 
-    public void setBanhoPet(boolean banhoPet)
+    private void setBanhoPet(boolean banhoPet)
     {
         this.banhoPet = banhoPet;
     }
 
-    public double getAbastecimentoResevatorioAgua()
+    private double getAbastecimentoResevatorioAgua()
     {
         return abastecimentoResevatorioAgua;
     }
 
-    public void setAbastecimentoResevatorioAgua(double abastecimentoResevatorioAgua)
+    private void setAbastecimentoResevatorioAgua(double abastecimentoResevatorioAgua)
     {
         this.abastecimentoResevatorioAgua = abastecimentoResevatorioAgua;
     }
 
-    public double getAbastecimentoResevatorioShampoo()
+    private double getAbastecimentoResevatorioShampoo()
     {
         return abastecimentoResevatorioShampoo;
     }
 
-    public void setAbastecimentoResevatorioShampoo(double abastecimentoResevatorioShampoo)
+    private void setAbastecimentoResevatorioShampoo(double abastecimentoResevatorioShampoo)
     {
         this.abastecimentoResevatorioShampoo = abastecimentoResevatorioShampoo;
     }
 
-    public double getNivelAgua()
-    {
-        return nivelAgua;
-    }
-
-    public void setNivelAgua(double nivelAgua)
-    {
-        this.nivelAgua = nivelAgua;
-    }
-
-    public double getNivelShampoo()
-    {
-        return nivelShampoo;
-    }
-
-    public void setNivelShampoo(double nivelShampoo)
-    {
-        this.nivelShampoo = nivelShampoo;
-    }
-
-    public boolean isBanho()
+    private boolean isBanho()
     {
         return banho;
     }
 
-    public void setBanho(boolean banho)
+    private void setBanho(boolean banho)
     {
         this.banho = banho;
     }
 
-    public boolean isPetNaMaquina()
+    private boolean isPetNaMaquina()
     {
         return petNaMaquina;
     }
 
-    public void setPetNaMaquina(boolean petNaMaquina)
+    private void setPetNaMaquina(boolean petNaMaquina)
     {
         this.petNaMaquina = petNaMaquina;
     }
 
-    public boolean isPetForaMaquina()
+    private boolean isPetForaMaquina()
     {
         return petForaMaquina;
     }
 
-    public void setPetForaMaquina(boolean petForaMaquina)
+    private void setPetForaMaquina(boolean petForaMaquina)
     {
         this.petForaMaquina = petForaMaquina;
     }
 
-    public boolean isLimparMaquina()
+    private boolean isLimparMaquina()
     {
         return limparMaquina;
     }
 
-    public void setLimparMaquina(boolean limparMaquina)
+    private void setLimparMaquina(boolean limparMaquina)
     {
         this.limparMaquina = limparMaquina;
+    }
+
+    private void colocarNaMaquinaBanho()
+    {
+        if(this.isPetNaMaquina())
+        {
+            System.out.println("Pet já está na máquina");
+        }
+        else
+        {
+            this.setPetNaMaquina(true);
+            this.setPetForaMaquina(false);
+            System.out.println("Pet colocado na máquina");
+        }
+    }
+
+    private void retirarPetDaMaquina()
+    {
+        if(this.isPetForaMaquina())
+        {
+            System.out.println("Pet já está fora da máquina");
+        }
+        else
+        {
+            this.setPetForaMaquina(true);
+            this.setPetNaMaquina(false);
+            System.out.println("Pet retirado da máquina");
+        }
+    }
+
+    private void limparMaquina()
+    {
+        if(this.isLimparMaquina())
+        {
+            System.out.println("Máquina já está limpa");
+        }
+        else
+        {
+            this.setLimparMaquina(true);
+            System.out.println("Máquina limpa");
+        }
     }
 
     public void menuPetShop()
@@ -152,12 +169,15 @@ public class Banho
                 break;
             case 7:
                 System.out.println("Colocar Pet na Máquina");
+                this.colocarNaMaquinaBanho();
                 break;
             case 8:
                 System.out.println("Retirar Pet da Máquina");
+                this.retirarPetDaMaquina();
                 break;
             case 9:
                 System.out.println("Limpar Máquina");
+                this.limparMaquina();
                 break;
             case 10:
                 System.out.println("Sair");
@@ -166,6 +186,5 @@ public class Banho
                 System.out.println("Opção inválida");
                 break;
         }
-
     }
 }
