@@ -61,7 +61,7 @@ public class ControleCarro
         return senditoCarro;
     }
 
-    private void setSenditoCarro(String senditoCarro) 
+    private void setSenditoCarro(String senditoCarro)
     {
         this.senditoCarro = senditoCarro;
     }
@@ -214,7 +214,7 @@ public class ControleCarro
         System.out.println("Ligado: " + this.isLigado());
         System.out.println("Velocidade: " + this.getVelocidade());
         System.out.println("Marcha: " + this.getMarcha());
-        System.out.println("Sentido: " + this.getSenditoCarro());
+        System.out.println("Frente: " + this.getSenditoCarro());
         System.out.println("Acelerar: " + this.isAcelerar());
         System.out.println("Frear: " + this.isFrear());
     }
