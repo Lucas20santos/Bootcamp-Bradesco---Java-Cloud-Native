@@ -127,7 +127,6 @@ public class ControleCarro
             {
                 System.out.println("Trocando marcha para ponto morto");
                 this.setMarcha("Ponto morto");
-                this.setSenditoCarro("Ponto morto");
                 this.setAcelerar(false);
                 this.setFrear(false);
             }
@@ -160,6 +159,52 @@ public class ControleCarro
             {
                 System.out.println("Trocando marcha para 6");
                 this.setMarcha("6");
+            }
+        }
+    }
+
+    private void trocarDirecao()
+    {
+        if(this.isLigado())
+        {
+            System.out.println("1 - Para frente");
+            System.out.println("2 - Para trás");
+            System.out.println("3 - Para a direita");
+            System.out.println("4 - Para a esquerda");
+
+            int opcao = Integer.parseInt(System.console().readLine());
+
+            switch (opcao)
+            {
+                case 1:
+                    this.setSenditoCarro("Frente");
+                    break;
+                case 2:
+                    this.setSenditoCarro("Trás");
+                    break;
+                case 3:
+                    if(this.getVelocidade() >= 0 && this.getVelocidade() <= 40)
+                    {
+                        this.setSenditoCarro("Direita");
+                    }
+                    else
+                    {
+                        System.out.println("Velocidade muito alta para virar a direita");
+                    }
+                    break;
+                case 4:
+                if(this.getVelocidade() >= 0 && this.getVelocidade() <= 40)
+                {
+                    this.setSenditoCarro("Esquerda");
+                }
+                else
+                {
+                    System.out.println("Velocidade muito alta para virar a direita");
+                }
+                    break;
+                default:
+                    System.out.println("Opção inválida");
+                    break;
             }
         }
     }
@@ -203,6 +248,9 @@ public class ControleCarro
                 this.status();
                 break;
             case 6:
+                this.trocarDirecao();
+                break;
+            case 7:
                 System.exit(0);
                 break;
             default:
