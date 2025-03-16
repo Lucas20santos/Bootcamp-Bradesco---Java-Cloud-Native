@@ -13,7 +13,7 @@ public class ControleCarro
     {
         this.ligado = false;
         this.marcha = "Ponto morto";
-        this.velocidade = 20;
+        this.velocidade = 0;
     }
 
     private boolean isFrear()
@@ -209,7 +209,7 @@ public class ControleCarro
         }
     }
 
-    private void status()
+    public void status()
     {
         System.out.println("Ligado: " + this.isLigado());
         System.out.println("Velocidade: " + this.getVelocidade());
