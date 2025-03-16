@@ -76,12 +76,12 @@ public class ControleCarro
         this.marcha = marcha;
     }
 
-    public void ligarCarro()
+    private void ligarCarro()
     {
         this.setLigado(true);
     }
 
-    public void desligarCarro()
+    private void desligarCarro()
     {
         if(this.getMarcha() == "Ponto morto" && this.getVelocidade() == 0)
         {
@@ -93,7 +93,7 @@ public class ControleCarro
         }
     }
 
-    public void acelerarCarro()
+    private void acelerarCarro()
     {
         if (this.isLigado() == true)
         {
@@ -106,7 +106,7 @@ public class ControleCarro
         }
     }
 
-    public void frearCarro()
+    private void frearCarro()
     {
         if (this.isLigado() == true)
         {
@@ -119,7 +119,7 @@ public class ControleCarro
         }
     }
 
-    public void trocarMarcha()
+    private void trocarMarcha()
     {
         if(this.isLigado())
         {
@@ -164,7 +164,7 @@ public class ControleCarro
         }
     }
 
-    public void status()
+    private void status()
     {
         System.out.println("Ligado: " + this.isLigado());
         System.out.println("Velocidade: " + this.getVelocidade());
@@ -172,5 +172,42 @@ public class ControleCarro
         System.out.println("Sentido: " + this.getSenditoCarro());
         System.out.println("Acelerar: " + this.isAcelerar());
         System.out.println("Frear: " + this.isFrear());
+    }
+
+    public void menu()
+    {
+        System.out.println("1 - Ligar Carro");
+        System.out.println("2 - Desligar Carro");
+        System.out.println("3 - Acelerar Carro");
+        System.out.println("4 - Frear Carro");
+        System.out.println("5 - Status");
+        System.out.println("6 - Sair");
+
+        int opcao = Integer.parseInt(System.console().readLine());
+
+        switch (opcao)
+        {
+            case 1:
+                this.ligarCarro();
+                break;
+            case 2:
+                this.desligarCarro();
+                break;
+            case 3:
+                this.acelerarCarro();
+                break;
+            case 4:
+                this.frearCarro();
+                break;
+            case 5:
+                this.status();
+                break;
+            case 6:
+                System.exit(0);
+                break;
+            default:
+                System.out.println("Opção inválida");
+                break;
+        }
     }
 }
