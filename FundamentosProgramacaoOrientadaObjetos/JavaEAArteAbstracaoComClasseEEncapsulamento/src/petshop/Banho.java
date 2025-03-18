@@ -9,7 +9,7 @@ public class Banho
     private double nivelShampoo = 10;
     private boolean banho = false;
     private boolean petNaMaquina = false;
-    private boolean petForaMaquina = false;
+    private boolean petForaMaquina = true;
     private boolean limparMaquina = false;
 
     public Banho()

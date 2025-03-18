@@ -7,7 +7,19 @@ public class Animal
         while(true)
         {
             Banho banho = new Banho();
-            banho.statusPetShop();
+
+            String verificarStatus = System.console()
+            .readLine("Deseja verificar o status do petshop[s/n]: ").toLowerCase();
+
+            if(verificarStatus.equals("s"))
+            {
+                banho.statusPetShop();
+            }
+            else
+            {
+                System.out.println("O status do petshop não foi verificado.");
+            }
+            
 
             System.out.println("Deseja ir para o menu interativo[s/n]: ");
             String opcao = System.console().readLine().toLowerCase();
