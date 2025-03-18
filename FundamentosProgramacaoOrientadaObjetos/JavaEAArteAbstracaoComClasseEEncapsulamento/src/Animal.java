@@ -4,9 +4,9 @@ public class Animal
 {
     public static void main(String[] args) 
     {
+        Banho banho = new Banho();
         while(true)
         {
-            Banho banho = new Banho();
 
             String verificarStatus = System.console()
             .readLine("Deseja verificar o status do petshop[s/n]: ").toLowerCase();
@@ -20,7 +20,6 @@ public class Animal
                 System.out.println("O status do petshop não foi verificado.");
             }
             
-
             System.out.println("Deseja ir para o menu interativo[s/n]: ");
             String opcao = System.console().readLine().toLowerCase();
             if(opcao.equals("s"))

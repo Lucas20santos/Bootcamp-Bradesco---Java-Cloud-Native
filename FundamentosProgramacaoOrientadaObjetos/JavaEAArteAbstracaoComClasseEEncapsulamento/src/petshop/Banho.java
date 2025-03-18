@@ -14,11 +14,7 @@ public class Banho
 
     public Banho()
     {
-        this.banhoPet = false;
-        this.banho = false;
-        this.petNaMaquina = false;
-        this.petForaMaquina = false;
-        this.limparMaquina = false;
+        System.out.println("Bem vindo ao PetShop");
     }
 
     private boolean isBanhoPet()
