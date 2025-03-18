@@ -2,9 +2,8 @@ package petshop;
 
 public class Banho 
 {
-    private boolean banhoPet = false;
-    private double abastecimentoResevatorioAgua = 0;
-    private double abastecimentoResevatorioShampoo = 0;
+    private double volumeAgua = 0;
+    private double volumeShampoo = 0;
     private double nivelAgua = 30;
     private double nivelShampoo = 10;
     private boolean banho = false;
@@ -17,34 +16,24 @@ public class Banho
         System.out.println("Bem vindo ao PetShop");
     }
 
-    private boolean isBanhoPet()
+    private double getvolumeAgua()
     {
-        return banhoPet;
+        return volumeAgua;
     }
 
-    private void setBanhoPet(boolean banhoPet)
+    private void setvolumeAgua(double volumeAgua)
     {
-        this.banhoPet = banhoPet;
+        this.volumeAgua = volumeAgua;
     }
 
-    private double getAbastecimentoResevatorioAgua()
+    private double getvolumeShampoo()
     {
-        return abastecimentoResevatorioAgua;
+        return volumeShampoo;
     }
 
-    private void setAbastecimentoResevatorioAgua(double abastecimentoResevatorioAgua)
+    private void setvolumeShampoo(double volumeShampoo)
     {
-        this.abastecimentoResevatorioAgua = abastecimentoResevatorioAgua;
-    }
-
-    private double getAbastecimentoResevatorioShampoo()
-    {
-        return abastecimentoResevatorioShampoo;
-    }
-
-    private void setAbastecimentoResevatorioShampoo(double abastecimentoResevatorioShampoo)
-    {
-        this.abastecimentoResevatorioShampoo = abastecimentoResevatorioShampoo;
+        this.volumeShampoo = volumeShampoo;
     }
 
     private boolean isBanho()
@@ -98,6 +87,19 @@ public class Banho
             this.setPetNaMaquina(true);
             this.setPetForaMaquina(false);
             System.out.println("Pet colocado na máquina");
+
+            if(this.nivelAgua >= 15 && this.nivelShampoo >= 5)
+            {
+                System.out.println("Banho liberado");
+                this.setBanho(true);
+            }
+            else
+            {
+                System.out.println("Banho não liberado");
+                this.setBanho(false);
+                this.setvolumeAgua(30 - this.volumeAgua);
+                this.setvolumeShampoo(10 - this.volumeShampoo);
+            }
         }
     }
 
@@ -130,9 +132,8 @@ public class Banho
 
     public void statusPetShop()
     {
-        System.out.println("Banho: " + this.isBanhoPet());
-        System.out.println("Abastecimento Reservatório Água: " + this.getAbastecimentoResevatorioAgua());
-        System.out.println("Abastecimento Reservatório Shampoo: " + this.getAbastecimentoResevatorioShampoo());
+        System.out.println("Abastecimento Reservatório Água: " + this.getvolumeAgua());
+        System.out.println("Abastecimento Reservatório Shampoo: " + this.getvolumeShampoo());
         System.out.println("Nível Água: " + this.nivelAgua);
         System.out.println("Nível Shampoo: " + this.nivelShampoo);
         System.out.println("Banho: " + this.isBanho());
