@@ -132,6 +132,19 @@ public class Banho
         }
     }
 
+    public void statusPetShop()
+    {
+        System.out.println("Banho: " + this.isBanhoPet());
+        System.out.println("Abastecimento Reservatório Água: " + this.getAbastecimentoResevatorioAgua());
+        System.out.println("Abastecimento Reservatório Shampoo: " + this.getAbastecimentoResevatorioShampoo());
+        System.out.println("Nível Água: " + this.nivelAgua);
+        System.out.println("Nível Shampoo: " + this.nivelShampoo);
+        System.out.println("Banho: " + this.isBanho());
+        System.out.println("Pet na Máquina: " + this.isPetNaMaquina());
+        System.out.println("Pet fora da Máquina: " + this.isPetForaMaquina());
+        System.out.println("Limpar Máquina: " + this.isLimparMaquina());
+    }
+
     public void menuPetShop()
     {
         System.out.println("1 - Banho");
