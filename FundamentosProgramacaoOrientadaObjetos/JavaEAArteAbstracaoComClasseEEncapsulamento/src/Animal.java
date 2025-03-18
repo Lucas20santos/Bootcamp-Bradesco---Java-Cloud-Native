@@ -7,6 +7,7 @@ public class Animal
         while(true)
         {
             Banho banho = new Banho();
+            banho.statusPetShop();
 
             System.out.println("Deseja ir para o menu interativo[s/n]: ");
             String opcao = System.console().readLine().toLowerCase();
